@@ -72,6 +72,44 @@ void main() {
           verifyNoMoreInteractions(mockOnBoardingLocalDataSrc);
         },
       );
+
+      group(
+        'check if user is first timer',
+        () {
+          test(
+            'checkIfuserIsFirstTimer return true when sucessful',
+            () async {
+              when(() => mockOnBoardingLocalDataSrc.checkIfUserIsFirstTimer())
+                  .thenAnswer((_) async => true);
+
+              final result = await repo.checkIfUserIsFirstTimer();
+              expect(result, const Right<Failure, bool>(true));
+              verify(() => mockOnBoardingLocalDataSrc.checkIfUserIsFirstTimer())
+                  .called(1);
+              verifyNoMoreInteractions(mockOnBoardingLocalDataSrc);
+            },
+          );
+
+          test(
+            'checkIfUserIsFirstTimer return false when unsucessful',
+            () async {
+              when(() => mockOnBoardingLocalDataSrc.checkIfUserIsFirstTimer())
+                  .thenThrow(cacheException);
+
+              final result = await repo.checkIfUserIsFirstTimer();
+              expect(
+                result,
+                Left<CacheFailure, bool>(
+                  CacheFailure.fromException(cacheException: cacheException),
+                ),
+              );
+              verify(() => mockOnBoardingLocalDataSrc.checkIfUserIsFirstTimer())
+                  .called(1);
+              verifyNoMoreInteractions(mockOnBoardingLocalDataSrc);
+            },
+          );
+        },
+      );
     },
   );
 }

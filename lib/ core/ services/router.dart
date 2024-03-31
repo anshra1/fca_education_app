@@ -1,13 +1,19 @@
+import 'package:fca_education_app/%20core/%20services/%20depandency_injection.dart';
 import 'package:fca_education_app/%20core/common/views/page_under_contruction.dart';
+import 'package:fca_education_app/src/on_boarding/presentation/cubit/on_boarding_cubit.dart';
 import 'package:fca_education_app/src/on_boarding/presentation/views/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case OnBoardingScreen.routeName:
       return _pageBuilder(
-        (_) => const OnBoardingScreen(),
+        (_) => BlocProvider(
+          create: (context) => sl<OnBoardingCubit>(),
+          child: const OnBoardingScreen(),
+        ),
         settings: settings,
       );
 

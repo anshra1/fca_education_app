@@ -1,8 +1,11 @@
+import 'package:fca_education_app/%20core/%20services/%20depandency_injection.dart';
 import 'package:fca_education_app/%20core/%20services/router.dart';
 import 'package:fca_education_app/%20core/res/fonts.dart';
 import 'package:flutter/material.dart';
 
-void main() async {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await init();
   runApp(const MyApp());
 }
 
