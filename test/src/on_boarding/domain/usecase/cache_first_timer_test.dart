@@ -17,7 +17,7 @@ void main() {
       cacheFirstTimer = CacheFirstTimer(repo: mockRepo);
     });
 
-    var tServerFailure = ServerFailure(
+    const tServerFailure = ServerFailure(
       message: 'message',
       statusCode: 'statusCode',
     );
@@ -25,7 +25,7 @@ void main() {
     test('should call cacheFirstTimer and return void', () async {
       // Arrange
       when(() => mockRepo.cacheFirstTimer()).thenAnswer(
-        (_) async => Left(tServerFailure),
+        (_) async => const Left(tServerFailure),
       );
 
       // Act
@@ -34,9 +34,9 @@ void main() {
       // Assert
       expect(
         result,
-        Left<ServerFailure, dynamic>(tServerFailure),
+        const Left<ServerFailure, dynamic>(tServerFailure),
       );
       verify(() => mockRepo.cacheFirstTimer()).called(1);
     });
   });
-}
+} 

@@ -2,11 +2,11 @@ import 'package:equatable/equatable.dart';
 import 'package:fca_education_app/%20core/errors/exception.dart';
 
 abstract class Failure extends Equatable {
-  Failure({
+  const Failure({
     required this.message,
     required this.statusCode,
   }) : assert(
-          statusCode.runtimeType == int || statusCode.runtimeType == String,
+          statusCode is int || statusCode is String,
           'statusCode must be of type int or String',
         );
 
@@ -18,14 +18,25 @@ abstract class Failure extends Equatable {
 }
 
 class CacheFailure extends Failure {
-   CacheFailure({
+  const CacheFailure({
     required super.message,
     required super.statusCode,
   });
+
+  CacheFailure.fromException({
+    required CacheException cacheException,
+  }) : this(
+          message: cacheException.message,
+          statusCode: cacheException.statusCode,
+        );
+
+  @override
+  String toString() =>
+      'CacheFailure(message: $message, statusCode: $statusCode)';
 }
 
 class ServerFailure extends Failure {
-   ServerFailure({
+  const ServerFailure({
     required super.message,
     required super.statusCode,
   });

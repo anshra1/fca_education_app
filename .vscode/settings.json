@@ -1,3 +1,5 @@
 {
-     "editor.lineHeight": 24
+     "editor.lineHeight": 25,
+     "editor.fontFamily": "JetBrains Mono",
+     "editor.fontSize": 17.5
 }

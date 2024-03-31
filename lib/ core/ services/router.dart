@@ -1,5 +1,5 @@
 import 'package:fca_education_app/%20core/common/views/page_under_contruction.dart';
-import 'package:fca_education_app/src/on_boarding/presentation/on_boarding_screen.dart';
+import 'package:fca_education_app/src/on_boarding/presentation/views/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
