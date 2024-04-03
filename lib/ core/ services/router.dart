@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/%20services/%20depandency_injection.dart';
+import 'package:fca_education_app/%20core/%20services/injection.dart';
 import 'package:fca_education_app/%20core/common/views/page_under_contruction.dart';
 import 'package:fca_education_app/src/on_boarding/presentation/cubit/on_boarding_cubit.dart';
 import 'package:fca_education_app/src/on_boarding/presentation/views/on_boarding_screen.dart';

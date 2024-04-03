@@ -7,18 +7,19 @@ part 'on_boarding_state.dart';
 
 class OnBoardingCubit extends Cubit<OnBoardingState> {
   OnBoardingCubit({
-    required this.cachingFirstTimer,
-    required this.checkIfUserIsFirstTimervoid,
-  }) : super(const OnBoardingInitial());
+    required CacheFirstTimer cachingFirstTimer,
+    required CheckUserIsFirstTimer checkIfUserIsFirstTimervoid,
+  })  : _cachingFirstTimer = cachingFirstTimer,
+        _checkIfUserIsFirstTimervoid = checkIfUserIsFirstTimervoid,
+        super(const OnBoardingInitial());
 
-  final CacheFirstTimer cachingFirstTimer;
-  final CheckUserIsFirstTimer checkIfUserIsFirstTimervoid;
+  final CacheFirstTimer _cachingFirstTimer;
+  final CheckUserIsFirstTimer _checkIfUserIsFirstTimervoid;
 
   Future<void> cacheFirstTimer() async {
-    emit(
-      const CachingFirstTimer(),
-    );
-    final result = await cachingFirstTimer();
+    emit(const CachingFirstTimer());
+
+    final result = await _cachingFirstTimer();
 
     result.fold(
       (failure) => emit(
@@ -31,10 +32,9 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
   }
 
   Future<void> checkIfUserIsFirstTimer() async {
-    emit(
-      const CheckIfUserIsFirstTimer(),
-    );
-    final result = await checkIfUserIsFirstTimervoid();
+    emit(const CheckIfUserIsFirstTimer());
+
+    final result = await _checkIfUserIsFirstTimervoid();
 
     result.fold(
       (failure) => emit(const OnBoardingStatus(isFirstTimer: true)),

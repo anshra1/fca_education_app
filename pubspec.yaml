@@ -10,10 +10,15 @@ environment:
 dependencies:
   bloc: ^8.1.4
   chewie: ^1.7.5
+  cloud_firestore: ^4.16.0
   cupertino_icons: ^1.0.6
   dartz: ^0.10.1
   equatable: ^2.0.5
   file_picker: ^8.0.0+1
+  firebase_auth: ^4.19.0
+  firebase_core: ^2.28.0
+  firebase_storage: ^11.7.0
+  firebase_ui_auth: ^1.13.1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.5
@@ -22,7 +27,7 @@ dependencies:
   iconly: ^1.0.1
   image_picker: ^1.0.7
   import_sorter: ^4.6.0
-  intl: ^0.19.0
+  intl: ^0.18.1
   lottie: ^3.1.0
   open_file: ^3.3.2
   path_provider: ^2.1.2
@@ -85,5 +90,3 @@ flutter:
           weight: 700
         - asset: assets/fonts/poppins/Poppins-ExtraBoldItalic.ttf
           weight: 800
-        
-          
