@@ -7,26 +7,41 @@ class LocalUser extends Equatable {
     required this.bio,
     required this.points,
     required this.fullName,
-     this.groupId = const [],
+    this.groupId = const [],
     this.enrolledCourses = const [],
     this.following = const [],
     this.followers = const [],
     this.profilePic,
   });
-
-  LocalUser.empty()
+  
+  const LocalUser.empty()
       : this(
-          uid: '',
-          email: '',
-          profilePic: '',
-          bio: '',
-          points: 0,
-          fullName: '',
-          groupId: [],
-          enrolledCourses: [],
-          following: [],
-          followers: [],
+          uid: 'local uid',
+          email: 'local mail',
+          profilePic: 'local pic',
+          bio: 'local bio',
+          points: 10,
+          fullName: 'local name',
+          groupId: const [],
+          enrolledCourses: const [],
+          following: const [],
+          followers: const [],
         );
+
+  Map<String, dynamic> toMap() {
+    return {
+      'uid': uid,
+      'email': email,
+      'bio': bio,
+      'points': points,
+      'fullName': fullName,
+      'groupId': groupId,
+      'enrolledCourses': enrolledCourses,
+      'following': following,
+      'followers': followers,
+      'profilePic': profilePic,
+    };
+  }
 
   final String uid;
   final String email;

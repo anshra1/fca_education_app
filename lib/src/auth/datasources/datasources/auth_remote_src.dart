@@ -1,10 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fca_education_app/%20core/enum/user_data.dart';
 import 'package:fca_education_app/%20core/errors/exception.dart';
-import 'package:fca_education_app/%20core/errors/failure.dart';
 import 'package:fca_education_app/%20core/utils/constants.dart';
 import 'package:fca_education_app/%20core/utils/typedefs.dart';
 import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';
@@ -90,12 +88,15 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
       var userData = await _getUserData(uid: user.uid);
 
       if (!userData.exists) {
-        await _setUserData(
-          user: user,
-          fallbackEmail: email,
-        );
-        userData = await _getUserData(uid: user.uid);
+     //   print('${userData.data()!}');
+        return LocalUserModel.fromMap(map: userData.data()!);
       }
+
+      // upload the user
+      await _setUserData(user: user, fallbackEmail: email);
+
+      userData = await _getUserData(uid: user.uid);
+   //    print('${userData.data()!}');
       return LocalUserModel.fromMap(map: userData.data()!);
     } on FirebaseAuthException catch (e) {
       throw ServerException(

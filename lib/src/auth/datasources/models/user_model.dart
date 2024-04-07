@@ -17,12 +17,12 @@ class LocalUserModel extends LocalUser {
 
   const LocalUserModel.empty()
       : this(
-          uid: '',
-          email: '',
-          bio: '',
+          uid: 'local uid',
+          email: 'local mail',
+          bio: 'local bio',
           points: 0,
-          fullName: '',
-          profilePic: '',
+          fullName: 'local name',
+          profilePic: 'local pic',
         );
 
   LocalUserModel.fromMap({
