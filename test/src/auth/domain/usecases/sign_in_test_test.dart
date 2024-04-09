@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:dartz/dartz.dart';
 import 'package:fca_education_app/%20core/errors/failure.dart';
 import 'package:fca_education_app/src/auth/domain/auth_repo.dart/atuh_repo.dart';

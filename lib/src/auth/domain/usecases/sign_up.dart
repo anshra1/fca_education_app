@@ -13,7 +13,7 @@ class SignUp extends UseCaseWithParams<void, SignUpParams> {
     return _authRepo.signUp(
         email: params.email,
         password: params.password,
-        fullName: params.fullName);
+        fullName: params.fullName,);
   }
 }
 

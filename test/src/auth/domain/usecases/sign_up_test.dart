@@ -1,8 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:fca_education_app/%20core/errors/failure.dart';
 import 'package:fca_education_app/src/auth/domain/auth_repo.dart/atuh_repo.dart';
-import 'package:fca_education_app/src/auth/domain/entites/local_user.dart';
-import 'package:fca_education_app/src/auth/domain/usecases/sign_in.dart';
+
 import 'package:fca_education_app/src/auth/domain/usecases/sign_up.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -50,7 +49,7 @@ void main() {
 
           verify(
             () => authRepo.signUp(
-                email: 'email', password: 'password', fullName: 'name'),
+                email: 'email', password: 'password', fullName: 'name',),
           ).called(1);
           verifyNoMoreInteractions(authRepo);
         },

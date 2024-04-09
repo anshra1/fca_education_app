@@ -87,8 +87,7 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
 
       var userData = await _getUserData(uid: user.uid);
 
-      if (!userData.exists) {
-     //   print('${userData.data()!}');
+      if (userData.exists) {
         return LocalUserModel.fromMap(map: userData.data()!);
       }
 
@@ -96,7 +95,6 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
       await _setUserData(user: user, fallbackEmail: email);
 
       userData = await _getUserData(uid: user.uid);
-   //    print('${userData.data()!}');
       return LocalUserModel.fromMap(map: userData.data()!);
     } on FirebaseAuthException catch (e) {
       throw ServerException(
@@ -126,12 +124,10 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
         password: password,
       );
 
-      await userCredential.user?.updateDisplayName(
-        fullName,
-      );
-      await userCredential.user?.updatePhotoURL(
-        kDefaultAvtar,
-      );
+      await userCredential.user?.updateDisplayName(fullName);
+
+      await userCredential.user?.updatePhotoURL(kDefaultAvtar);
+
       await _setUserData(
         user: userCredential.user!,
         fallbackEmail: email,
@@ -175,13 +171,15 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
               statusCode: 'Insufficent Problem',
             );
           }
+
           final newData = jsonDecode(userData as String) as DataMap;
-          await _authClient.currentUser?.reauthenticateWithCredential(
+         await _authClient.currentUser?.reauthenticateWithCredential(
             EmailAuthProvider.credential(
               email: _authClient.currentUser!.email!,
               password: newData['oldPassword'] as String,
             ),
           );
+
           await _authClient.currentUser?.updatePassword(
             newData['newPassword'] as String,
           );

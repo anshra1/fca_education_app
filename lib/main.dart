@@ -1,4 +1,5 @@
-import 'package:fca_education_app/%20core/%20services/injection.dart';
+import 'package:fca_education_app/%20core/%20services/injection_container.dart';
+
 import 'package:fca_education_app/%20core/%20services/router.dart';
 import 'package:fca_education_app/%20core/res/fonts.dart';
 import 'package:fca_education_app/firebase_options.dart';
