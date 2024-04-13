@@ -23,9 +23,7 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
 
     result.fold(
       (failure) => emit(
-        OnBoardingError(
-          message: failure.message,
-        ),
+        OnBoardingError(message: failure.message),
       ),
       (_) => emit(const UserCached()),
     );

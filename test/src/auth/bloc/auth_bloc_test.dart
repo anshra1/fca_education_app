@@ -1,13 +1,12 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
-
 import 'package:fca_education_app/%20core/errors/failure.dart';
-import 'package:fca_education_app/src/auth/bloc/auth_bloc.dart';
 import 'package:fca_education_app/src/auth/domain/entites/local_user.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/forgot_password.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/sign_in.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/sign_up.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/update_user.dart';
+import 'package:fca_education_app/src/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

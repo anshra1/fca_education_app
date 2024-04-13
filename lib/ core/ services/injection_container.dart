@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fca_education_app/src/auth/bloc/auth_bloc.dart';
 import 'package:fca_education_app/src/auth/datasources/datasources/auth_remote_src.dart';
 import 'package:fca_education_app/src/auth/datasources/repos/auth_repo_imp.dart';
 import 'package:fca_education_app/src/auth/domain/auth_repo.dart/atuh_repo.dart';
@@ -7,6 +6,7 @@ import 'package:fca_education_app/src/auth/domain/usecases/forgot_password.dart'
 import 'package:fca_education_app/src/auth/domain/usecases/sign_in.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/sign_up.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/update_user.dart';
+import 'package:fca_education_app/src/auth/presentation/bloc/auth_bloc.dart';
 import 'package:fca_education_app/src/on_boarding/data/datasources/on_boarding_local_data_src.dart';
 import 'package:fca_education_app/src/on_boarding/data/repo/on_boarding_repo_impl.dart';
 import 'package:fca_education_app/src/on_boarding/domain/repo/on_boarding_repo.dart';

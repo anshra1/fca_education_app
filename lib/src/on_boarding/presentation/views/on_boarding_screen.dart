@@ -11,7 +11,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
-  static const routeName = '/';
+//  static const routeName = '/';
 
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();
@@ -21,7 +21,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   void initState() {
     super.initState();
-    context.read<OnBoardingCubit>().checkIfUserIsFirstTimer();
+  //  context.read<OnBoardingCubit>().checkIfUserIsFirstTimer();
   }
 
   final pageController = PageController();
@@ -33,15 +33,20 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       body: BlocConsumer<OnBoardingCubit, OnBoardingState>(
         listener: (context, state) {
           if (state is OnBoardingStatus && !state.isFirstTimer) {
+            // Navigator.pushReplacementNamed(
+            //   context,
+            //   '/home',
+            // );
+          } else if (state is UserCached) {
             Navigator.pushReplacementNamed(
               context,
-              '/home',
+              '/',
             );
-          } else if (state is UserCached) {
-
           }
+          
         },
         builder: (context, state) {
+          debugPrint('test $state');
           if (state is CheckIfUserIsFirstTimer || state is CachingFirstTimer) {
             return const Loadingview();
           }

@@ -28,11 +28,11 @@ class LocalUserModel extends LocalUser {
   LocalUserModel.fromMap({
     required DataMap map,
   }) : super(
-          uid: map['uid'] as String,
-          email: map['email'] as String,
+          uid: map['uid'],
+          email: map['email'],
           bio: map['bio'] as String?,
           points: (map['points'] as num) as int,
-          fullName: map['fullName'] as String,
+          fullName: map['fullName'],
           profilePic: map['profilePic'] as String?,
           groupId: (map['groupId'] as List).cast<String>(),
           enrolledCourses: (map['enrolledCourses'] as List).cast<String>(),
