@@ -8,6 +8,7 @@ class UserProvider extends ChangeNotifier {
 
   void initUser(LocalUserModel? user) {
     if (_user != user) _user = user;
+    
   }
 
   set user(LocalUserModel? user) {

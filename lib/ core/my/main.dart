@@ -1,92 +1,131 @@
-// Copyright 2013 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// ignore_for_file: public_member_api_docs
-
-import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:gap/gap.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const BathTimeShow());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BathTimeShow extends StatefulWidget {
+  const BathTimeShow({super.key});
 
+  @override
+  State<BathTimeShow> createState() => _BathTimeShowState();
+}
+
+class _BathTimeShowState extends State<BathTimeShow> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'SharedPreferences Demo',
-      home: SharedPreferencesDemo(),
-    );
-  }
-}
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            children: [
+              const Text(
+                'Batch Time',
+                style: TextStyle(
+                  fontSize: 34,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Column(
+                children: list.map((batch) {
+                  if (selectedList.contains(batch.batchTime)) {
+                    batch.value = true;
+                  }
 
-class SharedPreferencesDemo extends StatefulWidget {
-  const SharedPreferencesDemo({super.key});
-
-  @override
-  SharedPreferencesDemoState createState() => SharedPreferencesDemoState();
-}
-
-class SharedPreferencesDemoState extends State<SharedPreferencesDemo> {
-  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
-  late Future<int> _counter;
-
-  Future<void> _incrementCounter() async {
-    final prefs = await _prefs;
-    final counter = (prefs.getInt('counter') ?? 0) + 1;
-
-    setState(() {
-      _counter = prefs.setInt('counter', counter).then((value) => counter);
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _counter = _prefs.then((SharedPreferences prefs) {
-      return prefs.getInt('counter') ?? 0;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('SharedPreferences Demo'),
-      ),
-      body: Center(
-        child: FutureBuilder<int>(
-          future: _counter,
-          builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
-            switch (snapshot.connectionState) {
-              case ConnectionState.none:
-              case ConnectionState.waiting:
-                return const CircularProgressIndicator();
-              case ConnectionState.active:
-              case ConnectionState.done:
-                if (snapshot.hasError) {
-                  return Text('Error: ${snapshot.error}');
-                } else {
-                  return Text(
-                    // ignore: lines_longer_than_80_chars
-                    'Button tapped ${snapshot.data} time${snapshot.data == 1 ? '' : 's'}.\n\n'
-                    'This should persist across restarts.',
+                  return BatchWidget(
+                    text: batch.batchTime,
+                    color: batch.value,
                   );
-                }
-            }
-          },
+                }).toList(),
+              ),
+              const Gap(10),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    list.add(
+                      BatchTime(batchTime: 'batchTime', value: true),
+                    );
+                    selectedList.add('batchTime');
+                  });
+                },
+                child: const Text('Add Batch'),
+              ),
+            ],
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+    );
+  }
+}
+
+List<BatchTime> list = [
+  BatchTime(batchTime: '10-2', value: false),
+  BatchTime(batchTime: '2-6', value: false),
+  BatchTime(batchTime: '6-10', value: false),
+  BatchTime(batchTime: '10-5', value: false),
+];
+
+List<String> selectedList = <String>[
+  '10-2',
+  '2-6',
+  '6-10',
+];
+
+class BatchWidget extends HookWidget {
+  const BatchWidget({
+    required this.text,
+    required this.color,
+    super.key,
+  });
+
+  final String text;
+  final bool color;
+
+  @override
+  Widget build(BuildContext context) {
+    final v = useState(color);
+    return GestureDetector(
+      onTap: () {
+        v.value = !v.value;
+
+        if (v.value) {
+          selectedList.add(text);
+        } else {
+          selectedList.removeWhere((element) => element == text);
+        }
+
+        print(selectedList);
+      },
+      child: Container(
+        width: double.infinity,
+        margin: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: v.value ? Colors.blue : Colors.grey,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Center(
+          child: Text(
+            text,
+            style: const TextStyle(
+              fontSize: 28,
+              color: Colors.white,
+            ),
+          ),
+        ),
       ),
     );
   }
+}
+
+class BatchTime {
+  BatchTime({
+    required this.batchTime,
+    required this.value,
+  });
+
+  final String batchTime;
+  bool value;
 }

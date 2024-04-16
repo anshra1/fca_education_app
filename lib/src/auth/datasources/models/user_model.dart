@@ -15,16 +15,6 @@ class LocalUserModel extends LocalUser {
     super.followers,
   });
 
-  const LocalUserModel.empty()
-      : this(
-          uid: 'local uid',
-          email: 'local mail',
-          bio: 'local bio',
-          points: 0,
-          fullName: 'local name',
-          profilePic: 'local pic',
-        );
-
   LocalUserModel.fromMap({
     required DataMap map,
   }) : super(
@@ -39,6 +29,22 @@ class LocalUserModel extends LocalUser {
           following: (map['following'] as List).cast<String>(),
           followers: (map['followers'] as List).cast<String>(),
         );
+
+  const LocalUserModel.empty()
+      : this(
+          uid: 'local uid',
+          email: 'local mail',
+          bio: 'local bio',
+          points: 0,
+          fullName: 'local name',
+          profilePic: 'local pic',
+        );
+
+  @override
+  String toString() {
+    // ignore: lines_longer_than_80_chars
+    return 'LocalUserModel{uid: $uid ,email: $email ,bio: $bio ,points: $points ,name: $fullName, profilePic: $profilePic}';
+  }
 
   LocalUserModel copyWith({
     String? uid,
