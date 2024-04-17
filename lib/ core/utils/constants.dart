@@ -1,2 +1,1 @@
-const kDefaultAvtar =
-    'https://media.istockphoto.com/id/476085198/photo/businessman-silhouette-as-avatar-or-default-profile-picture.jpg?s=2048x2048&w=is&k=20&c=VoujUFmrZr64WwE6MZQAt0Sa0KqlqKXdl35SewxD1WU=';
+const kDefaultAvtar = 'https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=740&t=st=1713245497~exp=1713246097~hmac=95c677346504c880cc8684f13eac2938e8ca430a285aa3cf4de2ac0d9db53548';

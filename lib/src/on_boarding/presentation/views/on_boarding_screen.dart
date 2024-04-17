@@ -46,7 +46,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           
         },
         builder: (context, state) {
-          debugPrint('test $state');
+         
           if (state is CheckIfUserIsFirstTimer || state is CachingFirstTimer) {
             return const Loadingview();
           }

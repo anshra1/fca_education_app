@@ -1,4 +1,6 @@
+import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
 import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/%20core/common/app/user_data_bloc/bloc/user_bloc.dart';
 import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';
 import 'package:fca_education_app/src/dashboard/presentation/provider/dashboard_controller.dart';
 import 'package:fca_education_app/src/dashboard/presentation/utils/dashboard_utils.dart';
@@ -31,8 +33,18 @@ class _DashboardState extends State<DashBoard> {
     return StreamBuilder<LocalUserModel>(
       stream: DashboardUtils.userDataStream,
       builder: (_, snapshot) {
-        //   final snap = snapshot.data ?? const LocalUserModel.empty();
-        //  debugPrint(snap.toString());
+        if (snapshot.hasData) {
+          context.read<UserProvider>().user = snapshot.data;
+
+          var previousData = context.read<UserBloc>().localUserModel;
+          debugPrint(previousData.toString());
+
+          context.read<UserBloc>().user = snapshot.data; // bloc
+
+          var changeData = context.read<UserBloc>().localUserModel;
+          debugPrint(changeData.toString());
+        }
+
         return Consumer<DashBoardController>(
           builder: (_, controller, __) {
             return Scaffold(
@@ -46,7 +58,6 @@ class _DashboardState extends State<DashBoard> {
                 backgroundColor: Colors.white,
                 elevation: 8,
                 onTap: (value) {
-              
                   //controller.changeIndex  is same
                   controller.changeIndex(value);
                 },

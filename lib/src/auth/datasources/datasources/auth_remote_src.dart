@@ -86,7 +86,7 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
       }
 
       var userData = await _getUserData(uid: user.uid);
-                          
+
       if (userData.exists) {
         return LocalUserModel.fromMap(map: userData.data()!);
       }
@@ -173,7 +173,7 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
           }
 
           final newData = jsonDecode(userData as String) as DataMap;
-         await _authClient.currentUser?.reauthenticateWithCredential(
+          await _authClient.currentUser?.reauthenticateWithCredential(
             EmailAuthProvider.credential(
               email: _authClient.currentUser!.email!,
               password: newData['oldPassword'],
@@ -226,8 +226,8 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
             uid: user.uid,
             email: user.email ?? fallbackEmail,
             points: 0,
-            fullName: user.displayName ?? '',
-            profilePic: user.photoURL ?? '',
+            fullName: _authClient.currentUser?.displayName ?? '',
+            profilePic: _authClient.currentUser?.photoURL ?? '',
           ).toMap(),
         );
   }

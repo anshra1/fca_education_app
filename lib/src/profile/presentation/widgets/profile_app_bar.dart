@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:fca_education_app/%20core/%20services/injection_container.dart';
-import 'package:fca_education_app/%20core/common/app/providers/tab_navigatore.dart';
+import 'package:fca_education_app/%20core/common/app/providers/tab_navigator.dart';
 import 'package:fca_education_app/%20core/common/widgets/popup_item.dart';
 import 'package:fca_education_app/%20core/res/colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';

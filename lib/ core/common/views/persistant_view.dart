@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/common/app/providers/tab_navigatore.dart';
+import 'package:fca_education_app/%20core/common/app/providers/tab_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

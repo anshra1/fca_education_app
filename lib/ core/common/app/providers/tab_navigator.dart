@@ -4,7 +4,7 @@ import 'package:uuid/uuid.dart';
 
 class TabNavigator extends ChangeNotifier {
   TabNavigator(this._intialPage) {
-    debugPrint('tab navigator used');
+   
     
     _navigationStack.add(_intialPage);
   }

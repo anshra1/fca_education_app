@@ -13,7 +13,7 @@ class LocalUser extends Equatable {
     this.followers = const [],
     this.profilePic,
   });
-  
+
   const LocalUser.empty()
       : this(
           uid: 'local uid',
@@ -61,5 +61,16 @@ class LocalUser extends Equatable {
   }
 
   @override
-  List<Object?> get props => [uid, email];
+  List<Object?> get props => [
+        uid,
+        email,
+        bio,
+        points,
+        fullName,
+        groupId,
+        enrolledCourses,
+        followers,
+        following,
+        profilePic,
+      ];
 }

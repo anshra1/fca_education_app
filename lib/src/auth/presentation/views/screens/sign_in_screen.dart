@@ -51,7 +51,7 @@ class _SignInScreenState extends State<SignInScreen> {
           }
         },
         builder: (context, state) {
-          debugPrint('state $state');
+          
           return GradientBackground(
             child: SafeArea(
               child: ListView(
