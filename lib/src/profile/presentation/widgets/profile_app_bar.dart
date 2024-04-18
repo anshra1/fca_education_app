@@ -3,11 +3,14 @@ import 'dart:async';
 import 'package:fca_education_app/%20core/%20services/injection_container.dart';
 import 'package:fca_education_app/%20core/common/app/providers/tab_navigator.dart';
 import 'package:fca_education_app/%20core/common/widgets/popup_item.dart';
+import 'package:fca_education_app/%20core/extensions/context_extension.dart';
 import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/src/auth/presentation/bloc/auth_bloc.dart';
+import 'package:fca_education_app/src/profile/presentation/views/edit_profile_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconly/iconly.dart';
-import 'package:provider/provider.dart';
 
 class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ProfileAppBar({super.key});
@@ -42,9 +45,12 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
                 onTap: () {
                   // context.push() same as below
-                  context
-                      .read<TabNavigator>()
-                      .push(TabItem(child: const Placeholder()));
+                  context.push(
+                    BlocProvider(
+                      create: (context) => sl<AuthBloc>(),
+                      child: const EditPrifleView(),
+                    ),
+                  );
                 },
               ),
               PopupMenuItem<void>(

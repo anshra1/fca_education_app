@@ -18,8 +18,4 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       localUserModel = user!;
     }
   }
-
-  void initUser(LocalUserModel user) {
-    if (localUserModel != user) localUserModel = user;
-  }
 }

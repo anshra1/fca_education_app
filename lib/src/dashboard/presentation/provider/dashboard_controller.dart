@@ -21,8 +21,11 @@ class DashBoardController extends ChangeNotifier {
       child: const PersistentView(),
     ),
     ChangeNotifierProvider(
-      create: (_) => TabNavigator(TabItem(child: const ProfileView())),
-      child: const PersistentView(), // => lead to profile view
+      create: (_) => TabNavigator(
+        TabItem(child: const ProfileView()),
+      ),
+      child: const PersistentView(), // => lead to profile view because it watch
+      // tab navigator all the time
     ),
   ];
 
