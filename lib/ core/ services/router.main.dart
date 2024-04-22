@@ -24,10 +24,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
             context.userProvider.initUser(localUser);
             
-            return BlocProvider( // bloc is used to send data experiment thing
-              create: (context) => UserBloc(localUserModel: localUser),
-              child: const DashBoard(),
-            );
+            return const DashBoard();
           } else {
             return BlocProvider(
               create: (_) => sl<AuthBloc>(),

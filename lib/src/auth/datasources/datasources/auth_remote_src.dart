@@ -193,7 +193,8 @@ class AuthRemotedataSourcesImpl implements AuthRemotedataSources {
               .child('profile_pics/${_authClient.currentUser?.uid}');
           await ref.putFile(userData as File);
           final url = await ref.getDownloadURL();
-          await _updateUserData({'profile_pics': url});
+          debugPrint('my url $url');  
+          await _updateUserData({'profilePic': url});
       }
     } on FirebaseException catch (e) {
       throw ServerException(

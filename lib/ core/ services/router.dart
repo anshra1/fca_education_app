@@ -1,5 +1,4 @@
 import 'package:fca_education_app/%20core/%20services/injection_container.dart';
-import 'package:fca_education_app/%20core/common/app/user_data_bloc/bloc/user_bloc.dart';
 import 'package:fca_education_app/%20core/common/views/page_under_contruction.dart';
 import 'package:fca_education_app/%20core/extensions/context_extension.dart';
 import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';

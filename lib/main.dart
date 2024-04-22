@@ -1,5 +1,6 @@
 import 'package:fca_education_app/%20core/%20services/injection_container.dart';
 import 'package:fca_education_app/%20core/%20services/router.dart';
+import 'package:fca_education_app/%20core/common/app/providers/course_of_the_notifier.dart';
 import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
 import 'package:fca_education_app/%20core/res/fonts.dart';
 import 'package:fca_education_app/firebase_options.dart';
@@ -32,6 +33,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (BuildContext context) => DashBoardController(),
+        ),
+        ChangeNotifierProvider(
+          create: (BuildContext context) => CourseOfTheDayNotifier(),
         ),
       ],
       child: MaterialApp(

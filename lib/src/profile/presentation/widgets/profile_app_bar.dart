@@ -48,7 +48,7 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
                   context.push(
                     BlocProvider(
                       create: (context) => sl<AuthBloc>(),
-                      child: const EditPrifleView(),
+                      child:  const EditPrifleView(),
                     ),
                   );
                 },

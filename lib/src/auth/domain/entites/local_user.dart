@@ -54,6 +54,8 @@ class LocalUser extends Equatable {
   final List<String> followers;
   final String? profilePic;
 
+  bool get isAdmin => email == '0ansh@gmail.com';
+
   @override
   String toString() {
     // ignore: lines_longer_than_80_chars

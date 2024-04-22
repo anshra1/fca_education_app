@@ -1,5 +1,4 @@
 import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
-import 'package:fca_education_app/%20core/common/app/user_data_bloc/bloc/user_bloc.dart';
 import 'package:fca_education_app/%20core/res/colors.dart';
 import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';
 import 'package:fca_education_app/src/dashboard/presentation/provider/dashboard_controller.dart';
@@ -35,14 +34,6 @@ class _DashboardState extends State<DashBoard> {
       builder: (_, snapshot) {
         if (snapshot.hasData) {
           context.read<UserProvider>().user = snapshot.data;
-
-          final previousData = context.read<UserBloc>().localUserModel;
-          debugPrint(previousData.toString());
-
-          context.read<UserBloc>().user = snapshot.data; // bloc
-
-          final changeData = context.read<UserBloc>().localUserModel;
-          debugPrint(changeData.toString());
         }
 
         return Consumer<DashBoardController>(

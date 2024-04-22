@@ -11,6 +11,7 @@ import 'package:fca_education_app/src/auth/presentation/bloc/auth_bloc.dart';
 import 'package:fca_education_app/src/profile/presentation/widgets/edit_profile_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -82,6 +83,7 @@ class _EditPrifleViewState extends State<EditPrifleView> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('build');
     return BlocConsumer<AuthBloc, AuthState>(
       listener: (context, state) {
         if (state is UserUpdateState) {
@@ -108,7 +110,7 @@ class _EditPrifleViewState extends State<EditPrifleView> {
             actions: [
               TextButton(
                 onPressed: () {
-                  if (nameChanged) context.pop();
+                  if (nothingChanged) context.pop();
                   final bloc = context.read<AuthBloc>();
 
                   if (passwordChanged) {
@@ -176,6 +178,7 @@ class _EditPrifleViewState extends State<EditPrifleView> {
                           emailController.addListener(() => refresh(() {}));
                           passwordController.addListener(() => refresh(() {}));
                           bioController.addListener(() => refresh(() {}));
+                          debugPrint('rebuild');
                           return Text(
                             'Done',
                             style: TextStyle(
@@ -202,6 +205,7 @@ class _EditPrifleViewState extends State<EditPrifleView> {
                         user.profilePic == null || user.profilePic!.isEmpty
                             ? null
                             : user.profilePic;
+                    debugPrint('my user $userImage');
                     return CircleAvatar(
                       radius: 50,
                       backgroundImage: pickedImage != null
@@ -252,6 +256,9 @@ class _EditPrifleViewState extends State<EditPrifleView> {
                   ),
                 ),
                 const Gap(30),
+                HookBuilder(builder: (context) {
+                  return const Gap(10);
+                },),
                 EditProfileForm(
                   fullNamController: fullNamController,
                   emailController: emailController,

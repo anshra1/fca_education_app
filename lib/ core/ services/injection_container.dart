@@ -7,6 +7,13 @@ import 'package:fca_education_app/src/auth/domain/usecases/sign_in.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/sign_up.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/update_user.dart';
 import 'package:fca_education_app/src/auth/presentation/bloc/auth_bloc.dart';
+import 'package:fca_education_app/src/course/data/datasources/course_remote_data_sources.dart';
+import 'package:fca_education_app/src/course/data/repo/course_repo_impl.dart';
+import 'package:fca_education_app/src/course/domain/repo/course_repo.dart';
+import 'package:fca_education_app/src/course/domain/usecases/add_course.dart';
+
+import 'package:fca_education_app/src/course/domain/usecases/get_course.dart';
+import 'package:fca_education_app/src/course/presentation/cubit/course_cubit.dart';
 import 'package:fca_education_app/src/on_boarding/data/datasources/on_boarding_local_data_src.dart';
 import 'package:fca_education_app/src/on_boarding/data/repo/on_boarding_repo_impl.dart';
 import 'package:fca_education_app/src/on_boarding/domain/repo/on_boarding_repo.dart';

@@ -7,7 +7,6 @@ import 'package:fca_education_app/src/auth/domain/usecases/forgot_password.dart'
 import 'package:fca_education_app/src/auth/domain/usecases/sign_in.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/sign_up.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/update_user.dart';
-import 'package:flutter/material.dart';
 part 'auth_event.dart';
 part 'auth_state.dart';
 
@@ -97,7 +96,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
     result.fold(
       (failure) {
-        debugPrint(failure.errorMessage);
+      
         emit(AuthErrorState(failure.errorMessage));
       },
       (_) => emit(const UserUpdateState()),

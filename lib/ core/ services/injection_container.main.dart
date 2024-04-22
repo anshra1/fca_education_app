@@ -5,6 +5,33 @@ GetIt sl = GetIt.instance;
 Future<void> init() async {
   await _onBoardingInit();
   await _authInit();
+  await _courseInit();
+}
+
+Future<void> _courseInit() async {
+  sl
+    ..registerFactory(
+      () => CourseCubit(
+        addCourse: sl(),
+        getCourse: sl(),
+      ),
+    )
+    ..registerLazySingleton(
+      () => AddCourses(courseRepo: sl()),
+    )
+    ..registerLazySingleton(
+      () => GetCourse(courseRepo: sl()),
+    )
+    ..registerLazySingleton<CourseRepo>(
+      () => CourseRepoImpl(sl()),
+    )
+    ..registerLazySingleton<CourseRemtoeDataSrc>(
+      () => CourseRemoteDataSrcImpl(
+        firestore: sl(),
+        storage: sl(),
+        auth: sl(),
+      ),
+    );
 }
 
 Future<void> _authInit() async {

@@ -1,12 +1,12 @@
 {
-   "uid": "",
-   "email": "",
-   "bio": "",
+   "uid": "local uid",
+   "email": "local mail",
+   "bio": "local bio",
    "points": 0,
-   "fullName": "",
+   "fullName": "local name",
    "groupId": [],
    "enrolledCourses": [],
    "following": [],
    "followers": [],
-   "profilePic": null
+   "profilePic": "local pic"
 }
