@@ -1,7 +1,13 @@
+import 'package:fca_education_app/%20core/%20services/injection_container.dart';
 import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
+import 'package:fca_education_app/%20core/extensions/context_extension.dart';
 import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/src/course/presentation/cubit/course_cubit.dart';
+import 'package:fca_education_app/src/course/presentation/views/add_course_sheet.dart';
+import 'package:fca_education_app/src/profile/presentation/widgets/admin_button.dart';
 import 'package:fca_education_app/src/profile/presentation/widgets/user_info_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:iconly/iconly.dart';
 import 'package:provider/provider.dart';
@@ -80,6 +86,26 @@ class ProfileBody extends StatelessWidget {
                 ),
               ],
             ),
+            const Gap(30),
+            if (context.currentUser!.isAdmin) ...[
+              AdminButton(
+                label: 'Add Course',
+                icon: IconlyLight.paper_upload,
+                onPressed: () {
+                  showModalBottomSheet<void>(
+                    backgroundColor: Colors.white,
+                    isScrollControlled: true,
+                    elevation: 0,
+                    useSafeArea: true,
+                    context: context,
+                    builder: (_) => BlocProvider(
+                      create: (_) => sl<CourseCubit>(),
+                      child: const AddCourseSheet(),
+                    ),
+                  );
+                },
+              ),
+            ],
           ],
         );
       },

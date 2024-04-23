@@ -45,11 +45,12 @@ class _HomeBodyState extends State<HomeBody> {
         } else if (state is CourseLoadedState && state.courses.isEmpty ||
             state is CourseErrorState) {
           return const NotFoundText(
-              text:
-                  'No courses is found \nPlease contact admin or if you are admin, '
-                  'add courses');
+            text:
+                'No courses is found \nPlease contact admin or if you are admin, '
+                'add courses',
+          );
         }
-        
+
         state as CourseLoadedState;
 
         final courses = state.courses
