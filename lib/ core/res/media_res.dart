@@ -18,7 +18,7 @@ class MediaResources {
   static const String casualMediataionScience =
       '$_baseVector/casual_meditation_science.png';
   static const String casualReading = '$_baseVector/casual_reading.png';
-  static const String microScope = '$_baseVector/microsope.png';
+  static const String microScope = '$_baseVector/microscope.png';
   static const String steamCup = '$_baseVector/steam_cup.png';
   static const String turquoisePotPoint =
       '$_baseVector/turquuise_pot_point.png';
