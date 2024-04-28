@@ -13,6 +13,15 @@ import 'package:fca_education_app/src/course/domain/repo/course_repo.dart';
 import 'package:fca_education_app/src/course/domain/usecases/add_course.dart';
 
 import 'package:fca_education_app/src/course/domain/usecases/get_course.dart';
+import 'package:fca_education_app/src/course/features/materials/data/datasources/material_remote_data_src.dart';
+import 'package:fca_education_app/src/course/features/materials/data/repo/material_repo_impl.dart';
+import 'package:fca_education_app/src/course/features/materials/domain/repo/material_repo.dart';
+import 'package:fca_education_app/src/course/features/materials/presentation/cubit/material_cubit.dart';
+import 'package:fca_education_app/src/course/features/videos/data/datasourses/video_remote_data_src.dart';
+import 'package:fca_education_app/src/course/features/videos/data/repo/video_repo_impl.dart';
+import 'package:fca_education_app/src/course/features/videos/domain/repo/video_repo.dart';
+import 'package:fca_education_app/src/course/features/videos/domain/usecases/add_video.dart';
+import 'package:fca_education_app/src/course/features/videos/presentation/cubit/video_cubit.dart';
 import 'package:fca_education_app/src/course/presentation/cubit/course_cubit.dart';
 import 'package:fca_education_app/src/on_boarding/data/datasources/on_boarding_local_data_src.dart';
 import 'package:fca_education_app/src/on_boarding/data/repo/on_boarding_repo_impl.dart';
@@ -24,5 +33,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../src/course/features/materials/domain/usecases/add_material.dart';
+import '../../src/course/features/materials/domain/usecases/get_material.dart';
+import '../../src/course/features/videos/domain/usecases/get_videos.dart';
 
 part 'injection_container.main.dart';

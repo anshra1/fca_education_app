@@ -6,6 +6,26 @@ Future<void> init() async {
   await _onBoardingInit();
   await _authInit();
   await _courseInit();
+  await _initVideo();
+  await _initMaterial();
+}
+
+Future<void> _initMaterial() async {
+  sl
+    ..registerFactory(
+      () => MaterialCubit(addMaterial: sl(), getMaterials: sl()),
+    )
+    ..registerLazySingleton(() => AddMaterial(sl()))
+    ..registerLazySingleton(() => GetMaterials(sl()))
+    ..registerLazySingleton<MaterialRepo>(() => MaterialRepoImpl(sl()))
+    ..registerLazySingleton<MaterialRemoteDataSrc>(
+      () => MaterialRemoteDataSrcImpl(
+        firestore: sl(),
+        auth: sl(),
+        storage: sl(),
+      ),
+    );
+  // ..registerFactory(() => ResourceController(storage: sl(), prefs: sl()));
 }
 
 Future<void> _courseInit() async {
@@ -31,6 +51,24 @@ Future<void> _courseInit() async {
         storage: sl(),
         auth: sl(),
       ),
+    );
+}
+
+Future<void> _initVideo() async {
+  sl
+    ..registerFactory(
+      () => VideoCubit(
+        addVideo: sl(),
+        getVideos: sl(),
+      ),
+    )
+    ..registerLazySingleton(() => AddVideo(repo: sl()))
+    ..registerLazySingleton(() => GetVideos(repo: sl()))
+    ..registerLazySingleton<VideoRepo>(
+      () => VideoRepoImpl(videoRemoteDataSrc: sl()),
+    )
+    ..registerLazySingleton<VideoRemoteDataSrc>(
+      () => VideoRemoteDataSrcImpl(firestore: sl(), auth: sl(), storage: sl()),
     );
 }
 

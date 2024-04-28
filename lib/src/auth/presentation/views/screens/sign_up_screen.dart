@@ -88,7 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushNamed(
+                        Navigator.pushReplacementNamed(
                           context,
                           SignInScreen.routeName,
                         );

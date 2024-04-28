@@ -5,6 +5,8 @@ import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';
 import 'package:fca_education_app/src/auth/presentation/bloc/auth_bloc.dart';
 import 'package:fca_education_app/src/auth/presentation/views/screens/sign_in_screen.dart';
 import 'package:fca_education_app/src/auth/presentation/views/screens/sign_up_screen.dart';
+import 'package:fca_education_app/src/course/domain/entites/entites.dart';
+import 'package:fca_education_app/src/course/presentation/views/course_detail_view.dart';
 import 'package:fca_education_app/src/dashboard/presentation/views/dashboard.dart';
 import 'package:fca_education_app/src/on_boarding/data/datasources/on_boarding_local_data_src.dart';
 import 'package:fca_education_app/src/on_boarding/presentation/cubit/on_boarding_cubit.dart';

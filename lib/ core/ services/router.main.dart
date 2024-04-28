@@ -23,7 +23,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
             );
 
             context.userProvider.initUser(localUser);
-            
+
             return const DashBoard();
           } else {
             return BlocProvider(
@@ -62,6 +62,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case '/forgot-password':
       return _pageBuilder(
         (p0) => const fui.ForgotPasswordScreen(),
+        settings: settings,
+      );
+
+    case CourseDetailView.routeName:
+      return _pageBuilder(
+        (p0) =>  CourseDetailView(course: settings.arguments! as Course),
         settings: settings,
       );
 

@@ -81,7 +81,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         baselineType: TextBaseline.alphabetic,
                         child: TextButton(
                           onPressed: () {
-                            Navigator.pushNamed(
+                            Navigator.pushReplacementNamed(
                               context,
                               SignUpScreen.routeName,
                             );
