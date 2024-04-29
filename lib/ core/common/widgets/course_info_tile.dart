@@ -2,7 +2,6 @@ import 'package:fca_education_app/%20core/res/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
-import 'package:iconly/iconly.dart';
 
 class CourseInfoTile extends StatelessWidget {
   const CourseInfoTile({

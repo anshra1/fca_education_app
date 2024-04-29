@@ -1,5 +1,4 @@
 import 'package:fca_education_app/%20core/common/app/providers/course_of_the_notifier.dart';
-import 'package:fca_education_app/%20core/res/media_res.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';

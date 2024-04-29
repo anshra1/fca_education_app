@@ -6,7 +6,6 @@ import 'package:fca_education_app/%20core/utils/datasourse_utils.dart';
 import 'package:fca_education_app/src/course/features/videos/data/models/video_model.dart';
 import 'package:fca_education_app/src/course/features/videos/domain/entity/video.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
 abstract class VideoRemoteDataSrc {

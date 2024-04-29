@@ -1,7 +1,6 @@
 import 'package:fca_education_app/%20core/common/app/providers/course_of_the_notifier.dart';
 import 'package:fca_education_app/%20core/common/views/loading_view.dart';
 import 'package:fca_education_app/%20core/common/widgets/not_found_text.dart';
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
 import 'package:fca_education_app/%20core/utils/core_utils.dart';
 import 'package:fca_education_app/src/course/presentation/cubit/course_cubit.dart';
 import 'package:fca_education_app/src/home/presentation/refractors/home_header.dart';
