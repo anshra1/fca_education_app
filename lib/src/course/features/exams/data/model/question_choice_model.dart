@@ -24,7 +24,7 @@ class QuestionChoiceModel extends QuestionChoice {
 
   QuestionChoiceModel.fromUploadMap(DataMap map)
       : this(
-    questionId: 'Test String',
+    questionId:  map['questionId'],
     identifier: map['identifier'],
     choiceAnswer: map['Answer'],
   );

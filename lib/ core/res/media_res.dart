@@ -1,70 +1,70 @@
 class MediaResources {
   const MediaResources._();
-
-  static const _baseVector = 'assets/vector';
-  static const _baseIcon = 'assets/Icons';
+  static const _baseVector = 'assets/vectors';
   static const _baseImage = 'assets/images';
   static const _baseLottie = 'assets/lottie';
+  static const _baseIcon = 'assets/icons';
 
-  // lottie
-  static const String pageUnderContruction =
-      '$_baseLottie/page_under_contruction.json';
-
-  // vector
-
-  static const String bluePotPlant = '$_baseVector/blue_pot_plant.png';
-  static const String casualLife = '$_baseVector/casual_life.png';
-  static const String casualMediataion = '$_baseVector/casual_meditation.png';
-  static const String casualMediataionScience =
+  static const bluePotPlant = '$_baseVector/blue_pot_plant.png';
+  static const casualLife = '$_baseVector/casual_life.png';
+  static const casualMeditation = '$_baseVector/casual_meditation.png';
+  static const casualMeditationScience =
       '$_baseVector/casual_meditation_science.png';
-  static const String casualReading = '$_baseVector/casual_reading.png';
-  static const String microScope = '$_baseVector/microscope.png';
-  static const String steamCup = '$_baseVector/steam_cup.png';
-  static const String turquoisePotPoint =
-      '$_baseVector/turquuise_pot_point.png';
+  static const casualReading = '$_baseVector/casual_reading.png';
+  static const microscope = '$_baseVector/microscope.png';
+  static const steamCup = '$_baseVector/steam_cup.png';
+  static const turquoisePotPlant = '$_baseVector/turquoise_pot_plant.png';
 
-  // image
+  /// Backgrounds
+  static const onBoardingBackground = '$_baseImage/onBoarding_background.png';
+  static const authGradientBackground =
+      '$_baseImage/auth_gradient_background.png';
+  static const homeGradientBackground =
+      '$_baseImage/home_gradient_background.png';
+  static const profileGradientBackground =
+      '$_baseImage/profile_gradient_background.png';
+  static const documentsGradientBackground =
+      '$_baseImage/documents_gradient_background.png';
+  static const leaderboardGradientBackground =
+      '$_baseImage/leaderboard_gradient_background.png';
 
-  static const String avtar = '$_baseImage/avtar.png';
-  static const String goldCrown = '$_baseImage/video_placeholder.png';
+  static const pageUnderConstruction =
+      '$_baseLottie/page_under_construction.json';
 
-  // icons
+  static const thumbnailPlaceholder = '$_baseImage/video_placeholder.png';
 
-  static const String atom = '$_baseIcon/atom.png';
-  static const String bronzeMedal = '$_baseIcon/bronze_medal.png';
-  static const String calculator = '$_baseIcon/calcuator.png';
-  static const String course = '$_baseIcon/course.png';
-  static const String courseInfoExam = '$_baseIcon/course_info_exam.png';
-  static const String courseInfoMaterial =
-      '$_baseIcon/course_info_material.png';
-  static const String courserInfoVideo = '$_baseIcon/course_info_video.png';
-  static const String crown = '$_baseIcon/crown.png';
-  static const String dart = '$_baseIcon/dart.png';
-  static const String dna = '$_baseIcon/dna.png';
-  static const String document = '$_baseIcon/document.png';
-  static const String examTime = '$_baseIcon/exam_time.png';
-  static const String examTimeRed = '$_baseIcon/exam_time_red.png';
-  static const String flask = '$_baseIcon/flask.png';
-  static const String json = '$_baseIcon/json.png';
-  static const String microsope = '$_baseIcon/microsope.png';
-  static const String questionsDocument = '$_baseIcon/questions_document.png';
-  static const String scoreBoard = '$_baseIcon/score_board.png';
-  static const String silverMedal = '$_baseIcon/silver_medal.png';
-  static const String subscriptinMonth = '$_baseIcon/subscriptin_month.png';
-  static const String subcriptionYear = '$_baseIcon/subscriptin_year.png';
-  static const String test = '$_baseIcon/test.png';
-  static const String translation = '$_baseIcon/translation.png';
-  static const String user = '$_baseIcon/user.png';
-  static const String video = '$_baseIcon/video.png';
-  static const String write = '$_baseIcon/write.png';
-  static const String youtube = '$_baseIcon/youtube.png';
+  static const user = '$_baseIcon/user.png';
+  static const youtube = '$_baseIcon/youtube.png';
+  static const course = '$_baseIcon/course.png';
+  static const subscriptionMonthly = '$_baseIcon/subscription_month.png';
+  static const subscriptionYearly = '$_baseIcon/subscription_year.png';
+  static const test = '$_baseIcon/test.png';
+  static const video = '$_baseIcon/video.png';
+  static const material = '$_baseIcon/document.png';
+  static const json = '$_baseIcon/json.png';
+  static const examTime = '$_baseIcon/exam_time.png';
+  static const examQuestions = '$_baseIcon/questions_document.png';
+  static const examTimeRed = '$_baseIcon/exam_time_red.png';
+  static const courseInfoExam = '$_baseIcon/course_info_exam.png';
+  static const courseInfoMaterial = '$_baseIcon/course_info_material.png';
+  static const courseInfoVideo = '$_baseIcon/course_info_video.png';
 
-  // subjects
-  static const String physicsIcon = '$_baseIcon/physics.png';
-  static const String scienceIcon = '$_baseIcon/science.png';
-  static const String chemistoryIcon = '$_baseIcon/chemistry.png';
-  static const String biologyIcon = '$_baseIcon/biology.png';
-  static const String mathIcon = '$_baseIcon/math.png';
-  static const String languageIcon = '$_baseIcon/language.png';
-  static const String literatureIcon = '$_baseIcon/literature.png';
+  /// Subjects
+  static const physicsIcon = '$_baseIcon/atom.png';
+  static const scienceIcon = '$_baseIcon/microscope.png';
+  static const chemistryIcon = '$_baseIcon/flask.png';
+  static const biologyIcon = '$_baseIcon/dna.png';
+  static const mathIcon = '$_baseIcon/calculator.png';
+  static const languageIcon = '$_baseIcon/translation.png';
+  static const literatureIcon = '$_baseIcon/write.png';
+
+  static const scoreboard = '$_baseIcon/scoreboard.png';
+
+  static const goldCrown = '$_baseIcon/crown.png';
+  static const silverMedal = '$_baseIcon/silver_medal.png';
+  static const bronzeMedal = '$_baseIcon/bronze_medal.png';
+
+  // Lottie
+  static const emptyLeaderboard = '$_baseLottie/empty_leaderboard.json';
+  static const noNotifications = '$_baseLottie/no_notifications.json';
 }

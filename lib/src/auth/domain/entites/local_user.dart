@@ -53,8 +53,8 @@ class LocalUser extends Equatable {
   final List<String> following;
   final List<String> followers;
   final String? profilePic;
-
-  bool get isAdmin => email == '0ansh@gmail.com';
+  bool get isAdmin => email == '00ansh@gmail.com';
+  
 
   @override
   String toString() {

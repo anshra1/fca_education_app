@@ -1,6 +1,8 @@
+import 'package:fca_education_app/%20core/common/app/providers/course_of_the_notifier.dart';
 import 'package:fca_education_app/%20core/common/app/providers/tab_navigator.dart';
 import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
 import 'package:fca_education_app/src/auth/domain/entites/local_user.dart';
+import 'package:fca_education_app/src/course/domain/entites/entites.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -21,4 +23,9 @@ extension ContextExt on BuildContext {
   void pop() => tabNavigator.pop();
 
   void push(Widget page) => tabNavigator.push(TabItem(child: page));
+
+  CourseOfTheDayNotifier get courseOfTheDayNotifier =>
+      read<CourseOfTheDayNotifier>();
+
+  Course get courseOfTheDay => courseOfTheDayNotifier.courseOfTheDay!;
 }

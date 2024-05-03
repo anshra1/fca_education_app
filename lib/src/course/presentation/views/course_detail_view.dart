@@ -35,7 +35,7 @@ class CourseDetailView extends StatelessWidget {
                   child: course.image != null
                       ? Image.network(course.image!)
                       : Image.asset(
-                          MediaResources.casualMediataion,
+                          MediaResources.casualMeditation,
                         ),
                 ),
               ),

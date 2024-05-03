@@ -265,7 +265,7 @@ class ImagePick extends HookWidget {
             )
           : userImage != null
               ? NetworkImage(userImage)
-              : const AssetImage(MediaResources.atom) as ImageProvider,
+              : const AssetImage(MediaResources.physicsIcon) as ImageProvider,
       child: Stack(
         alignment: AlignmentDirectional.center,
         children: [

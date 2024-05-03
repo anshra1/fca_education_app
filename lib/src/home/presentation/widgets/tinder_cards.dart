@@ -66,7 +66,7 @@ class _TinderCardsState extends State<TinderCards>
               bottom: 130,
               right: 20,
               child: Image.asset(
-                MediaResources.microScope,
+                MediaResources.microscope,
                 height: 180,
                 width: 149,
       

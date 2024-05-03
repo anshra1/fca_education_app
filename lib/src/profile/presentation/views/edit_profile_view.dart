@@ -214,7 +214,7 @@ class _EditPrifleViewState extends State<EditPrifleView> {
                             )
                           : userImage != null
                               ? NetworkImage(userImage)
-                              : const AssetImage(MediaResources.atom)
+                              : const AssetImage(MediaResources.physicsIcon)
                                   as ImageProvider,
                       child: Stack(
                         alignment: AlignmentDirectional.center,

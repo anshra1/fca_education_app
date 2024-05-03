@@ -19,9 +19,9 @@ class UserChoiceModel extends UserChoice {
 
   UserChoiceModel.fromMap(DataMap map)
       : this(
-          questionId: map['questionId'] as String,
-          correctChoice: map['correctChoice'] as String,
-          userChoice: map['userChoice'] as String,
+          questionId: map['questionId'],
+          correctChoice: map['correctChoice'],
+          userChoice: map['userChoice'],
         );
 
   UserChoiceModel copyWith({

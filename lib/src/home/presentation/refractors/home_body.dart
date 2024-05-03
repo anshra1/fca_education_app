@@ -5,6 +5,7 @@ import 'package:fca_education_app/%20core/utils/core_utils.dart';
 import 'package:fca_education_app/src/course/presentation/cubit/course_cubit.dart';
 import 'package:fca_education_app/src/home/presentation/refractors/home_header.dart';
 import 'package:fca_education_app/src/home/presentation/refractors/home_subject.dart';
+import 'package:fca_education_app/src/home/presentation/refractors/home_video.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -64,6 +65,8 @@ class _HomeBodyState extends State<HomeBody> {
             const HomeHeader(),
             const Gap(20),
             HomeSubject(courses: courses),
+            const Gap(20),
+            const HomeVideos(),
           ],
         );
       },

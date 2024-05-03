@@ -26,7 +26,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
                 radius: 24,
                 backgroundImage: provider.user!.profilePic != null
                     ? NetworkImage(provider.user!.profilePic!)
-                    : const AssetImage(MediaResources.atom) as ImageProvider,
+                    : const AssetImage(MediaResources.physicsIcon)
+                        as ImageProvider,
               ),
             );
           },

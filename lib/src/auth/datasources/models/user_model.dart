@@ -21,7 +21,7 @@ class LocalUserModel extends LocalUser {
           uid: map['uid'],
           email: map['email'],
           bio: map['bio'] as String?,
-          points: (map['points'] as num) as int,
+          points: (map['points'] as num).toInt(),
           fullName: map['fullName'],
           profilePic: map['profilePic'] as String?,
           groupId: (map['groupId'] as List).cast<String>(),

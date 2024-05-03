@@ -12,7 +12,7 @@ class PageUnderConstruction extends StatelessWidget {
       child: Scaffold(
         body: GradientBackground(
           child: Center(
-            child: Lottie.asset(MediaResources.pageUnderContruction),
+            child: Lottie.asset(MediaResources.pageUnderConstruction),
           ),
         ),
       ),
