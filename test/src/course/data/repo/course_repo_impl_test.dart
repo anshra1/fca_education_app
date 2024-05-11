@@ -1,8 +1,8 @@
 // ignore_for_file: unused_local_variable, lines_longer_than_80_chars
 
 import 'package:dartz/dartz.dart';
-import 'package:fca_education_app/%20core/errors/exception.dart';
-import 'package:fca_education_app/%20core/errors/failure.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
+import 'package:fca_education_app/core/errors/failure.dart';
 import 'package:fca_education_app/src/course/data/datasources/course_remote_data_sources.dart';
 import 'package:fca_education_app/src/course/data/model/course_model.dart';
 import 'package:fca_education_app/src/course/data/repo/course_repo_impl.dart';

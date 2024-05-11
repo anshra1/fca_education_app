@@ -1,10 +1,10 @@
-import 'package:fca_education_app/%20core/common/widgets/course_info_tile.dart';
-import 'package:fca_education_app/%20core/common/widgets/expandable_text.dart';
-import 'package:fca_education_app/%20core/common/widgets/gradient_background.dart';
-import 'package:fca_education_app/%20core/common/widgets/nested_back_button.dart';
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
-import 'package:fca_education_app/%20core/extensions/int_extension.dart';
-import 'package:fca_education_app/%20core/res/media_res.dart';
+import 'package:fca_education_app/core/common/widgets/course_info_tile.dart';
+import 'package:fca_education_app/core/common/widgets/expandable_text.dart';
+import 'package:fca_education_app/core/common/widgets/gradient_background.dart';
+import 'package:fca_education_app/core/common/widgets/nested_back_button.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/extensions/int_extension.dart';
+import 'package:fca_education_app/core/res/media_res.dart';
 import 'package:fca_education_app/src/course/domain/entites/entites.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';

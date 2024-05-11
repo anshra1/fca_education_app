@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:fca_education_app/%20core/enum/user_data.dart';
+import 'package:fca_education_app/core/enum/user_data.dart';
 import 'package:fca_education_app/src/auth/domain/entites/local_user.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/forgot_password.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/sign_in.dart';

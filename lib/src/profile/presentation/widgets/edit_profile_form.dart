@@ -1,5 +1,5 @@
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
-import 'package:fca_education_app/%20core/extensions/string_extension.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/extensions/string_extension.dart';
 import 'package:fca_education_app/src/profile/presentation/widgets/edit_profile_form_field.dart';
 import 'package:flutter/material.dart';
 

@@ -1,5 +1,5 @@
-import 'package:fca_education_app/%20core/usecases/usecases.dart';
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/usecases/usecases.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/course/features/videos/domain/entity/video.dart';
 import 'package:fca_education_app/src/course/features/videos/domain/repo/video_repo.dart';
 

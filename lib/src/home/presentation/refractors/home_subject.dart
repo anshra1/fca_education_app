@@ -1,6 +1,6 @@
-import 'package:fca_education_app/%20core/common/widgets/course_tile.dart';
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
-import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/core/common/widgets/course_tile.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/res/colors.dart';
 import 'package:fca_education_app/src/course/domain/entites/entites.dart';
 import 'package:fca_education_app/src/course/presentation/views/all_course_view.dart';
 import 'package:fca_education_app/src/course/presentation/views/course_detail_view.dart';

@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fca_education_app/%20core/enum/user_data.dart';
-import 'package:fca_education_app/%20core/errors/exception.dart';
-import 'package:fca_education_app/%20core/utils/constants.dart';
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/enum/user_data.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
+import 'package:fca_education_app/core/utils/constants.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';

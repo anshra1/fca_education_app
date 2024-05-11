@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:fca_education_app/%20core/errors/exception.dart';
-import 'package:fca_education_app/%20core/errors/failure.dart';
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
+import 'package:fca_education_app/core/errors/failure.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/course/features/videos/data/datasourses/video_remote_data_src.dart';
 import 'package:fca_education_app/src/course/features/videos/domain/entity/video.dart';
 import 'package:fca_education_app/src/course/features/videos/domain/repo/video_repo.dart';

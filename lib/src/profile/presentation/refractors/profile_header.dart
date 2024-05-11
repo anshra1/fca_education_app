@@ -1,7 +1,7 @@
-import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
-import 'package:fca_education_app/%20core/res/colors.dart';
-import 'package:fca_education_app/%20core/res/media_res.dart';
+import 'package:fca_education_app/core/common/app/providers/user_providers.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/res/colors.dart';
+import 'package:fca_education_app/core/res/media_res.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

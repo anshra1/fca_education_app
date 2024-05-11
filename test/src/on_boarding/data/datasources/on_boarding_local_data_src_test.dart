@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/errors/exception.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
 import 'package:fca_education_app/src/on_boarding/data/datasources/on_boarding_local_data_src.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

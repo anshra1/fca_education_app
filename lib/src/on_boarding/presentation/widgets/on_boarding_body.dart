@@ -1,6 +1,6 @@
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
-import 'package:fca_education_app/%20core/res/colors.dart';
-import 'package:fca_education_app/%20core/res/fonts.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/res/colors.dart';
+import 'package:fca_education_app/core/res/fonts.dart';
 import 'package:fca_education_app/src/on_boarding/domain/entites/page_content.dart';
 import 'package:fca_education_app/src/on_boarding/presentation/cubit/on_boarding_cubit.dart';
 import 'package:flutter/material.dart';

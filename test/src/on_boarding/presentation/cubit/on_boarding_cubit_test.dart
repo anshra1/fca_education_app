@@ -3,7 +3,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
 
-import 'package:fca_education_app/%20core/errors/failure.dart';
+import 'package:fca_education_app/core/errors/failure.dart';
 import 'package:fca_education_app/src/on_boarding/domain/usecase/cache_first_timer.dart';
 import 'package:fca_education_app/src/on_boarding/domain/usecase/check_user_is_first_timer.dart';
 

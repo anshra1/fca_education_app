@@ -1,6 +1,6 @@
-import 'package:fca_education_app/%20core/common/views/loading_view.dart';
-import 'package:fca_education_app/%20core/common/widgets/gradient_background.dart';
-import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/core/common/views/loading_view.dart';
+import 'package:fca_education_app/core/common/widgets/gradient_background.dart';
+import 'package:fca_education_app/core/res/colors.dart';
 import 'package:fca_education_app/src/on_boarding/domain/entites/page_content.dart';
 import 'package:fca_education_app/src/on_boarding/presentation/cubit/on_boarding_cubit.dart';
 import 'package:fca_education_app/src/on_boarding/presentation/widgets/on_boarding_body.dart';

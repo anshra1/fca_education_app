@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/errors/exception.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class OnBoardingLocalDataSrc {

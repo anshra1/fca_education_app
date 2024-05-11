@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fca_education_app/%20core/errors/exception.dart';
-import 'package:fca_education_app/%20core/utils/datasourse_utils.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
+import 'package:fca_education_app/core/utils/datasourse_utils.dart';
 import 'package:fca_education_app/src/course/features/exams/data/model/exam_model.dart';
 import 'package:fca_education_app/src/course/features/exams/data/model/exam_question_model.dart';
 import 'package:fca_education_app/src/course/features/exams/data/model/question_choice_model.dart';

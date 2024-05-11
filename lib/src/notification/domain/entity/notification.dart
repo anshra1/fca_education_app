@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:fca_education_app/%20core/enum/notification_enum.dart';
+import 'package:fca_education_app/core/enum/notification_enum.dart';
 
 class Notification extends Equatable {
   const Notification({
@@ -7,15 +7,15 @@ class Notification extends Equatable {
     required this.title,
     required this.body,
     required this.catgory,
-    required this.seen,
     required this.sentAt,
+    this.seen = false,
   });
 
   Notification.empty()
       : id = 'test_id',
         title = 'test_title',
         body = 'test_body',
-        catgory = NotificationCatgory.NONE,
+        catgory = NotificationCatgory.MATERIAL,
         seen = false,
         sentAt = DateTime.now();
 

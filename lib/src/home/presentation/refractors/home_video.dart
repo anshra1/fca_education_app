@@ -1,8 +1,8 @@
-import 'package:fca_education_app/%20core/%20services/injection_container.dart';
-import 'package:fca_education_app/%20core/common/views/loading_view.dart';
-import 'package:fca_education_app/%20core/common/widgets/not_found_text.dart';
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
-import 'package:fca_education_app/%20core/utils/core_utils.dart';
+import 'package:fca_education_app/core/%20services/injection_container.dart';
+import 'package:fca_education_app/core/common/views/loading_view.dart';
+import 'package:fca_education_app/core/common/widgets/not_found_text.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/utils/core_utils.dart';
 import 'package:fca_education_app/src/course/features/videos/presentation/cubit/video_cubit.dart';
 import 'package:fca_education_app/src/home/presentation/widgets/section_header.dart';
 import 'package:flutter/material.dart';
@@ -59,6 +59,7 @@ class _HomeVideosState extends State<HomeVideos> {
                 ),
               ),
               const Gap(20),
+              // ignore: unused_local_variable
               for (final video in state.videos.take(5)) const Placeholder(),
             ],
           );

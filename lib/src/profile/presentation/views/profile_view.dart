@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/common/widgets/gradient_background.dart';
+import 'package:fca_education_app/core/common/widgets/gradient_background.dart';
 import 'package:fca_education_app/src/profile/presentation/refractors/profile_body.dart';
 import 'package:fca_education_app/src/profile/presentation/refractors/profile_header.dart';
 import 'package:fca_education_app/src/profile/presentation/widgets/profile_app_bar.dart';

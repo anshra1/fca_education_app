@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fca_education_app/%20core/errors/exception.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
 import 'package:fca_education_app/src/chat/data/model/group_model.dart';
 import 'package:fca_education_app/src/course/data/model/course_model.dart';
 import 'package:fca_education_app/src/course/domain/entites/entites.dart';
@@ -87,16 +87,15 @@ class CourseRemoteDataSrcImpl implements CourseRemtoeDataSrc {
   }
 
   @override
-  Future<List<Course>> getCourses() async {
+  Future<List<CourseModel>> getCourses() async {
     try {
       final user = _auth.currentUser;
       if (user == null) {
         throw const ServerException(
-          message: 'user is not authenticated',
+          message: 'User is not authenticated',
           statusCode: '401',
         );
       }
-
       return _firestore.collection('courses').get().then(
             (value) => value.docs
                 .map((doc) => CourseModel.fromMap(doc.data()))
@@ -104,16 +103,13 @@ class CourseRemoteDataSrcImpl implements CourseRemtoeDataSrc {
           );
     } on FirebaseException catch (e) {
       throw ServerException(
-        message: e.message ?? 'unknown error occured',
+        message: e.message ?? 'Unknown error occurred',
         statusCode: e.code,
       );
     } on ServerException {
       rethrow;
     } catch (e) {
-      throw ServerException(
-        message: e.toString(),
-        statusCode: '505',
-      );
+      throw ServerException(message: e.toString(), statusCode: '505');
     }
   }
 }

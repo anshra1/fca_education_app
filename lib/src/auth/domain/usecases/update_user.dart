@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:fca_education_app/%20core/enum/user_data.dart';
-import 'package:fca_education_app/%20core/usecases/usecases.dart';
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/enum/user_data.dart';
+import 'package:fca_education_app/core/usecases/usecases.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/auth/domain/auth_repo.dart/atuh_repo.dart';
 
 class UpdateUser extends UseCaseWithParams<void, UpdateUserParams> {

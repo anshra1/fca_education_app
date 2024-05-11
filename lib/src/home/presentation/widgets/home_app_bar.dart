@@ -1,7 +1,8 @@
-import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
-import 'package:fca_education_app/%20core/res/media_res.dart';
+import 'package:fca_education_app/core/common/app/providers/user_providers.dart';
+import 'package:fca_education_app/core/res/media_res.dart';
+import 'package:fca_education_app/src/home/presentation/widgets/notification_bell.dart';
 import 'package:flutter/material.dart';
-import 'package:iconly/iconly.dart';
+
 import 'package:provider/provider.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -17,7 +18,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () {},
           icon: const Icon(Icons.search),
         ),
-        const Icon(IconlyLight.notification),
+       const NotificationBell(),
         Consumer<UserProvider>(
           builder: (_, provider, __) {
             return Padding(

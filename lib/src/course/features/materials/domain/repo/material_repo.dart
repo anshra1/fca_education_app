@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/course/features/materials/domain/entity/resourse.dart';
 
 abstract class MaterialRepo {

@@ -1,8 +1,8 @@
-import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
-import 'package:fca_education_app/%20core/common/widgets/gradient_background.dart';
-import 'package:fca_education_app/%20core/common/widgets/rounded_button.dart';
-import 'package:fca_education_app/%20core/res/fonts.dart';
-import 'package:fca_education_app/%20core/utils/core_utils.dart';
+import 'package:fca_education_app/core/common/app/providers/user_providers.dart';
+import 'package:fca_education_app/core/common/widgets/gradient_background.dart';
+import 'package:fca_education_app/core/common/widgets/rounded_button.dart';
+import 'package:fca_education_app/core/res/fonts.dart';
+import 'package:fca_education_app/core/utils/core_utils.dart';
 import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';
 import 'package:fca_education_app/src/auth/presentation/bloc/auth_bloc.dart';
 import 'package:fca_education_app/src/auth/presentation/views/screens/sign_in_screen.dart';

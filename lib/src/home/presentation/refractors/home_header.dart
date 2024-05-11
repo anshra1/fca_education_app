@@ -1,5 +1,5 @@
-import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/common/app/providers/user_providers.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
 import 'package:fca_education_app/src/home/presentation/widgets/tinder_cards.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

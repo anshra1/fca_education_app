@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:fca_education_app/%20core/res/media_res.dart';
+import 'package:fca_education_app/core/res/media_res.dart';
 
 class PageContent extends Equatable {
   const PageContent({

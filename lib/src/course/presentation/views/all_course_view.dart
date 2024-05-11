@@ -1,6 +1,6 @@
-import 'package:fca_education_app/%20core/common/widgets/course_tile.dart';
-import 'package:fca_education_app/%20core/common/widgets/gradient_background.dart';
-import 'package:fca_education_app/%20core/common/widgets/nested_back_button.dart';
+import 'package:fca_education_app/core/common/widgets/course_tile.dart';
+import 'package:fca_education_app/core/common/widgets/gradient_background.dart';
+import 'package:fca_education_app/core/common/widgets/nested_back_button.dart';
 import 'package:fca_education_app/src/course/domain/entites/entites.dart';
 import 'package:fca_education_app/src/course/presentation/views/course_detail_view.dart';
 import 'package:flutter/material.dart';

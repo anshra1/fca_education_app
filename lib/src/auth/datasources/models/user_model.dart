@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/auth/domain/entites/local_user.dart';
 
 class LocalUserModel extends LocalUser {
@@ -39,12 +39,6 @@ class LocalUserModel extends LocalUser {
           fullName: 'local name',
           profilePic: 'local pic',
         );
-
-  @override
-  String toString() {
-    // ignore: lines_longer_than_80_chars
-    return 'LocalUserModel{uid: $uid ,email: $email ,bio: $bio ,points: $points ,name: $fullName, profilePic: $profilePic}';
-  }
 
   LocalUserModel copyWith({
     String? uid,

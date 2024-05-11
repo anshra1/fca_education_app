@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';
 import 'package:fca_education_app/src/auth/domain/entites/local_user.dart';
 import 'package:flutter_test/flutter_test.dart';

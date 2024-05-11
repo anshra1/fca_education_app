@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:fca_education_app/%20core/%20services/injection_container.dart';
-import 'package:fca_education_app/%20core/common/app/providers/tab_navigator.dart';
-import 'package:fca_education_app/%20core/common/widgets/popup_item.dart';
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
-import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/core/%20services/injection_container.dart';
+import 'package:fca_education_app/core/common/app/providers/tab_navigator.dart';
+import 'package:fca_education_app/core/common/widgets/popup_item.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/res/colors.dart';
 import 'package:fca_education_app/src/auth/presentation/bloc/auth_bloc.dart';
 import 'package:fca_education_app/src/profile/presentation/views/edit_profile_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';

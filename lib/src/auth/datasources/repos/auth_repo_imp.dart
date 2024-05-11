@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:fca_education_app/%20core/enum/user_data.dart';
-import 'package:fca_education_app/%20core/errors/exception.dart';
-import 'package:fca_education_app/%20core/errors/failure.dart';
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/enum/user_data.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
+import 'package:fca_education_app/core/errors/failure.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/auth/datasources/datasources/auth_remote_src.dart';
 import 'package:fca_education_app/src/auth/domain/auth_repo.dart/atuh_repo.dart';
 import 'package:fca_education_app/src/auth/domain/entites/local_user.dart';

@@ -1,5 +1,5 @@
-import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
-import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/core/common/app/providers/user_providers.dart';
+import 'package:fca_education_app/core/res/colors.dart';
 import 'package:fca_education_app/src/auth/datasources/models/user_model.dart';
 import 'package:fca_education_app/src/dashboard/presentation/provider/dashboard_controller.dart';
 import 'package:fca_education_app/src/dashboard/presentation/utils/dashboard_utils.dart';

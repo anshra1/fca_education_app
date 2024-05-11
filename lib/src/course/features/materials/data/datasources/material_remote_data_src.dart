@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fca_education_app/%20core/errors/exception.dart';
-import 'package:fca_education_app/%20core/utils/datasourse_utils.dart';
+import 'package:fca_education_app/core/errors/exception.dart';
+import 'package:fca_education_app/core/utils/datasourse_utils.dart';
 import 'package:fca_education_app/src/course/features/materials/data/model/resource_model.dart';
 import 'package:fca_education_app/src/course/features/materials/domain/entity/resourse.dart';
 import 'package:firebase_auth/firebase_auth.dart';

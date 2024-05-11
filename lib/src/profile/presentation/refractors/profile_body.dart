@@ -1,9 +1,13 @@
-import 'package:fca_education_app/%20core/%20services/injection_container.dart';
-import 'package:fca_education_app/%20core/common/app/providers/user_providers.dart';
-import 'package:fca_education_app/%20core/extensions/context_extension.dart';
-import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/core/%20services/injection_container.dart';
+import 'package:fca_education_app/core/common/app/providers/user_providers.dart';
+import 'package:fca_education_app/core/extensions/context_extension.dart';
+import 'package:fca_education_app/core/res/colors.dart';
+import 'package:fca_education_app/src/course/features/exams/presentation/views/add_exam_view.dart';
+import 'package:fca_education_app/src/course/features/materials/presentation/views/add_material_view.dart';
+import 'package:fca_education_app/src/course/features/videos/presentation/views/add_video_view.dart';
 import 'package:fca_education_app/src/course/presentation/cubit/course_cubit.dart';
 import 'package:fca_education_app/src/course/presentation/views/add_course_sheet.dart';
+import 'package:fca_education_app/src/notification/presentation/cubit/notification_cubit.dart';
 import 'package:fca_education_app/src/profile/presentation/widgets/admin_button.dart';
 import 'package:fca_education_app/src/profile/presentation/widgets/user_info_card.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +90,7 @@ class ProfileBody extends StatelessWidget {
                 ),
               ],
             ),
-            const Gap(30),
+            const Gap(25),
             if (context.currentUser!.isAdmin) ...[
               AdminButton(
                 label: 'Add Course',
@@ -98,11 +102,35 @@ class ProfileBody extends StatelessWidget {
                     elevation: 0,
                     useSafeArea: true,
                     context: context,
-                    builder: (_) => BlocProvider(
-                      create: (_) => sl<CourseCubit>(),
+                    builder: (_) => MultiBlocProvider(
+                      providers: [
+                        BlocProvider(create: (_) => sl<CourseCubit>()),
+                        BlocProvider(create: (_) => sl<NotificationCubit>()),
+                      ],
                       child: const AddCourseSheet(),
                     ),
                   );
+                },
+              ),
+              AdminButton(
+                label: 'Add Video',
+                icon: IconlyLight.video,
+                onPressed: () {
+                  Navigator.pushNamed(context, AddVideoView.routeName);
+                },
+              ),
+              AdminButton(
+                label: 'Add Materials',
+                icon: IconlyLight.paper_download,
+                onPressed: () {
+                  Navigator.pushNamed(context, AddMaterialView.routeName);
+                },
+              ),
+              AdminButton(
+                label: 'Add Exams',
+                icon: IconlyLight.document,
+                onPressed: () {
+                  Navigator.pushNamed(context, AddExamView.routeName);
                 },
               ),
             ],

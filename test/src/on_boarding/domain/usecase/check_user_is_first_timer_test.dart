@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:fca_education_app/%20core/errors/failure.dart';
+import 'package:fca_education_app/core/errors/failure.dart';
 import 'package:fca_education_app/src/on_boarding/domain/repo/on_boarding_repo.dart';
 import 'package:fca_education_app/src/on_boarding/domain/usecase/check_user_is_first_timer.dart';
 import 'package:flutter_test/flutter_test.dart';

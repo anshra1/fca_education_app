@@ -1,6 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';
-import 'package:fca_education_app/%20core/errors/failure.dart';
+import 'package:fca_education_app/core/errors/failure.dart';
 import 'package:fca_education_app/src/auth/domain/entites/local_user.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/forgot_password.dart';
 import 'package:fca_education_app/src/auth/domain/usecases/sign_in.dart';

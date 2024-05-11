@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/course/features/exams/domain/%20entites/question_choices.dart';
 
 class QuestionChoiceModel extends QuestionChoice {

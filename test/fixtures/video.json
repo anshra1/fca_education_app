@@ -1,9 +1,8 @@
 {
-   "id": "empty.id",
-   "videoURL": "empty.url",
-   "courseId": "empty.courseId",
-   
-   "thumbnail": null,
-   "title": null,
-   "tutor": null
+  "id": "_empty.id",
+  "thumbnail": null,
+  "videoURL": "_empty.videoURL",
+  "title": null,
+  "tutor": null,
+  "courseId": "_empty.courseId"
 }

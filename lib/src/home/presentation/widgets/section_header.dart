@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/res/colors.dart';
+import 'package:fca_education_app/core/res/colors.dart';
 import 'package:flutter/material.dart';
 
 class SectionHeader extends StatelessWidget {

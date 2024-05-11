@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fca_education_app/%20core/utils/typedefs.dart';
+import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/course/features/exams/data/model/user_choice_model.dart';
 import 'package:fca_education_app/src/course/features/exams/domain/%20entites/use_choice.dart';
 import 'package:fca_education_app/src/course/features/exams/domain/%20entites/user_exam.dart';

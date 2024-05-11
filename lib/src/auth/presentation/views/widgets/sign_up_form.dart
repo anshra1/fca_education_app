@@ -1,4 +1,4 @@
-import 'package:fca_education_app/%20core/common/widgets/i_field.dart';
+import 'package:fca_education_app/core/common/widgets/i_field.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:iconly/iconly.dart';
