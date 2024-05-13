@@ -34,7 +34,6 @@ class _CoursePickerState extends State<CoursePicker> {
   Widget build(BuildContext context) {
     return BlocConsumer<CourseCubit, CourseState>(
       listener: (context, state) {
-        
         if (state is CourseErrorState) {
           CoreUtils.showSnackBar(context, state.message);
           Navigator.pop(context);
@@ -47,7 +46,6 @@ class _CoursePickerState extends State<CoursePicker> {
         }
       },
       builder: (context, state) {
-       
         return TextFormField(
           controller: widget.controller,
           readOnly: true,
