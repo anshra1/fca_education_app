@@ -2,6 +2,7 @@ import 'package:fca_education_app/core/%20services/injection_container.dart';
 import 'package:fca_education_app/core/common/app/providers/user_providers.dart';
 import 'package:fca_education_app/core/extensions/context_extension.dart';
 import 'package:fca_education_app/core/res/colors.dart';
+import 'package:fca_education_app/src/course/features/exams/presentation/app/cubit/exam_cubit.dart';
 import 'package:fca_education_app/src/course/features/exams/presentation/views/add_exam_view.dart';
 import 'package:fca_education_app/src/course/features/materials/presentation/views/add_material_view.dart';
 import 'package:fca_education_app/src/course/features/videos/presentation/views/add_video_view.dart';
@@ -106,6 +107,7 @@ class ProfileBody extends StatelessWidget {
                       providers: [
                         BlocProvider(create: (_) => sl<CourseCubit>()),
                         BlocProvider(create: (_) => sl<NotificationCubit>()),
+                        BlocProvider(create: (_) => sl<ExamCubit>()),
                       ],
                       child: const AddCourseSheet(),
                     ),
@@ -123,7 +125,7 @@ class ProfileBody extends StatelessWidget {
                 label: 'Add Materials',
                 icon: IconlyLight.paper_download,
                 onPressed: () {
-                  Navigator.pushNamed(context, AddMaterialView.routeName);
+                  Navigator.pushNamed(context, AddMaterialsView.routeName);
                 },
               ),
               AdminButton(

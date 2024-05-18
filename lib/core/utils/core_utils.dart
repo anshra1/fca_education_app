@@ -1,7 +1,11 @@
 import 'dart:io';
 
+import 'package:fca_education_app/core/enum/notification_enum.dart';
 import 'package:fca_education_app/core/res/colors.dart';
+import 'package:fca_education_app/src/notification/data/model/notification_model.dart';
+import 'package:fca_education_app/src/notification/presentation/cubit/notification_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 
 class CoreUtils {
@@ -49,5 +53,20 @@ class CoreUtils {
       return File(image.path);
     }
     return null;
+  }
+
+  static void sendNotification(
+    BuildContext context, {
+    required String title,
+    required String body,
+    required NotificationCatgory category,
+  }) {
+    context.read<NotificationCubit>().sendNotification(
+          NotificationModel.empty().copyWith(
+            title: title,
+            body: body,
+            catgory: category,
+          ),
+        );
   }
 }

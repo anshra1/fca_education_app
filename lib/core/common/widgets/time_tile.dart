@@ -1,4 +1,3 @@
-
 import 'package:fca_education_app/core/common/widgets/time_text.dart';
 import 'package:fca_education_app/core/res/colors.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,7 @@ class TimeTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 12,
-        vertical: 4,
+        vertical: 5,
       ),
       decoration: BoxDecoration(
         color: Colours.primaryColour,
@@ -23,6 +22,7 @@ class TimeTile extends StatelessWidget {
       child: TimeText(
         time,
         prefixText: prefixText,
+        maxLines: 2,
         style: const TextStyle(
           color: Colors.white,
           fontSize: 12,

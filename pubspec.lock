@@ -353,6 +353,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0"
+  file_icon:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: ab6433a9396c7fb8f472f9343ab36c8fe7cc6d58
+      url: "https://github.com/NonymousMorlock/file_icon"
+    source: git
+    version: "1.0.0"
   file_picker:
     dependency: "direct main"
     description:
@@ -1423,7 +1432,7 @@ packages:
     source: hosted
     version: "5.1.0"
   video_player:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: video_player
       sha256: db6a72d8f4fd155d0189845678f55ad2fd54b02c10dcafd11c068dbb631286c0

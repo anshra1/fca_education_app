@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'material_state.dart';
 
-class MaterialCubit extends Cubit<MaterialState> {
+class MaterialCubit extends Cubit<MaterialStates> {
   MaterialCubit({
     required AddMaterial addMaterial,
     required GetMaterials getMaterials,
@@ -30,7 +30,7 @@ class MaterialCubit extends Cubit<MaterialState> {
         (_) => null,
       );
     }
-    if(state is! MaterialError) emit(const MaterialsAdded());
+    if (state is! MaterialError) emit(const MaterialsAdded());
   }
 
   Future<void> getMaterials(String courseId) async {

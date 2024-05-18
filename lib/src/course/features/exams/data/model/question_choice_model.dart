@@ -1,3 +1,6 @@
+
+
+
 import 'package:fca_education_app/core/utils/typedefs.dart';
 import 'package:fca_education_app/src/course/features/exams/domain/%20entites/question_choices.dart';
 
@@ -24,7 +27,7 @@ class QuestionChoiceModel extends QuestionChoice {
 
   QuestionChoiceModel.fromUploadMap(DataMap map)
       : this(
-    questionId:  map['questionId'],
+    questionId: 'Test String',
     identifier: map['identifier'],
     choiceAnswer: map['Answer'],
   );

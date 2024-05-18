@@ -58,9 +58,8 @@ class _NotificationBellState extends State<NotificationBell> {
         } else if (state is NotificationError) {
           CoreUtils.showSnackBar(context, state.message);
         }
-      },
+      } ,
       builder: (context, state) {
-      
         if (state is NotificationsLoaded) {
           final unseenNotificationsLength = state.notifications
               .where((notification) => !notification.seen)

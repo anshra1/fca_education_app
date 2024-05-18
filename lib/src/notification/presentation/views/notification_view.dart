@@ -4,7 +4,6 @@ import 'package:fca_education_app/core/common/views/loading_view.dart';
 import 'package:fca_education_app/core/common/widgets/nested_back_button.dart';
 import 'package:fca_education_app/core/extensions/context_extension.dart';
 import 'package:fca_education_app/core/utils/core_utils.dart';
-
 import 'package:fca_education_app/src/notification/presentation/cubit/notification_cubit.dart';
 import 'package:fca_education_app/src/notification/presentation/widgets/no_notification.dart';
 import 'package:fca_education_app/src/notification/presentation/widgets/notification_tile.dart';

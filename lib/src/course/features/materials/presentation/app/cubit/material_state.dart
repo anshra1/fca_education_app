@@ -1,28 +1,28 @@
 part of 'material_cubit.dart';
 
-abstract class MaterialState extends Equatable {
-  const MaterialState();
+abstract class MaterialStates extends Equatable {
+  const MaterialStates();
   @override
   List<Object> get props => [];
 }
 
-class MaterialInitial extends MaterialState {
+class MaterialInitial extends MaterialStates {
   const MaterialInitial();
 }
 
-class AddingMaterials extends MaterialState {
+class AddingMaterials extends MaterialStates {
   const AddingMaterials();
 }
 
-class LoadingMaterials extends MaterialState {
+class LoadingMaterials extends MaterialStates {
   const LoadingMaterials();
 }
 
-class MaterialsAdded extends MaterialState {
+class MaterialsAdded extends MaterialStates {
   const MaterialsAdded();
 }
 
-class MaterialsLoaded extends MaterialState {
+class MaterialsLoaded extends MaterialStates {
   const MaterialsLoaded(this.materials);
 
   final List<Resource> materials;
@@ -31,7 +31,7 @@ class MaterialsLoaded extends MaterialState {
   List<Object> get props => [materials];
 }
 
-class MaterialError extends MaterialState {
+class MaterialError extends MaterialStates {
   const MaterialError(this.message);
 
   final String message;

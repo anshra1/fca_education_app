@@ -4,6 +4,7 @@ import 'package:fca_education_app/src/course/features/exams/data/model/user_choi
 import 'package:fca_education_app/src/course/features/exams/domain/%20entites/use_choice.dart';
 import 'package:fca_education_app/src/course/features/exams/domain/%20entites/user_exam.dart';
 
+
 class UserExamModel extends UserExam {
   const UserExamModel({
     required super.examId,
@@ -45,7 +46,7 @@ class UserExamModel extends UserExam {
     int? totalQuestions,
     String? examTitle,
     String? examImageUrl,
-    DateTime? dataSubmitted,
+    DateTime? dateSubmitted,
     List<UserChoice>? answers,
   }) {
     return UserExamModel(
@@ -54,7 +55,7 @@ class UserExamModel extends UserExam {
       totalQuestions: totalQuestions ?? this.totalQuestions,
       examTitle: examTitle ?? this.examTitle,
       examImageUrl: examImageUrl ?? this.examImageUrl,
-      dataSubmitted: dataSubmitted ?? this.dataSubmitted,
+      dataSubmitted: dateSubmitted ?? dataSubmitted,
       answers: answers ?? this.answers,
     );
   }

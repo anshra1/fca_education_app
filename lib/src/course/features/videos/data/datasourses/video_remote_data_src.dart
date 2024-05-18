@@ -45,7 +45,7 @@ class VideoRemoteDataSrcImpl implements VideoRemoteDataSrc {
           .collection('videos')
           .doc();
 
-      var videoModel = (Video as VideoModel).copyWith(id: videoRef.id);
+      var videoModel = (video as VideoModel).copyWith(id: videoRef.id);
 
       if (videoModel.thumbnailIsFile) {
         final thumbnailFileRef = _storage.ref().child(

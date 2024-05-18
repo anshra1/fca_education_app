@@ -41,7 +41,9 @@ class VideoTile extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: video.thumbnail == null
-                          ? const AssetImage(MediaResources.thumbnailPlaceholder)
+                          ? const AssetImage(
+                              MediaResources.thumbnailPlaceholder,
+                            )
                           : isFile
                               ? FileImage(File(video.thumbnail!))
                               : NetworkImage(video.thumbnail!) as ImageProvider,

@@ -32,9 +32,9 @@ class _TimeTextState extends State<TimeText> {
   void initState() {
     super.initState();
     timeAgos = widget.time.timeAgo;
-    timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if(mounted) {
-        if(timeAgos != widget.time.timeAgo) {
+    timer = Timer.periodic(const Duration(seconds: 59), (_) {
+      if (mounted) {
+        if (timeAgos != widget.time.timeAgo) {
           setState(() {
             timeAgos = widget.time.timeAgo;
           });
@@ -55,10 +55,11 @@ class _TimeTextState extends State<TimeText> {
       '${widget.prefixText != null ? '${widget.prefixText}' : ''} $timeAgos',
       maxLines: widget.maxLines,
       overflow: widget.overflow,
-      style: widget.style ?? const TextStyle(
-        fontSize: 12,
-        color: Colours.neutralTextColour,
-      ),
+      style: widget.style ??
+          const TextStyle(
+            fontSize: 12,
+            color: Colours.neutralTextColour,
+          ),
     );
   }
 }

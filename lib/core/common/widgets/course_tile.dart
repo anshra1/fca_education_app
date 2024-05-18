@@ -15,6 +15,7 @@ class CourseTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: HitTestBehavior.opaque,
       onTap: voidCallback,
       child: SizedBox(
         width: 54,

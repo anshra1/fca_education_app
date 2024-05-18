@@ -28,7 +28,8 @@ import 'package:fca_education_app/src/course/features/materials/data/repo/materi
 import 'package:fca_education_app/src/course/features/materials/domain/repo/material_repo.dart';
 import 'package:fca_education_app/src/course/features/materials/domain/usecases/add_material.dart';
 import 'package:fca_education_app/src/course/features/materials/domain/usecases/get_material.dart';
-import 'package:fca_education_app/src/course/features/materials/presentation/cubit/material_cubit.dart';
+import 'package:fca_education_app/src/course/features/materials/presentation/app/cubit/material_cubit.dart';
+import 'package:fca_education_app/src/course/features/materials/presentation/app/providers/resource_controller.dart';
 import 'package:fca_education_app/src/course/features/videos/data/datasourses/video_remote_data_src.dart';
 import 'package:fca_education_app/src/course/features/videos/data/repo/video_repo_impl.dart';
 import 'package:fca_education_app/src/course/features/videos/domain/repo/video_repo.dart';

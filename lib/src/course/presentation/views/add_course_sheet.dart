@@ -1,13 +1,11 @@
 import 'dart:io';
 
-import 'package:fca_education_app/core/%20services/injection_container.dart';
 import 'package:fca_education_app/core/common/widgets/title_input_field.dart';
 import 'package:fca_education_app/core/enum/notification_enum.dart';
 import 'package:fca_education_app/core/utils/constants.dart';
 import 'package:fca_education_app/core/utils/core_utils.dart';
 import 'package:fca_education_app/src/course/data/model/course_model.dart';
 import 'package:fca_education_app/src/course/presentation/cubit/course_cubit.dart';
-import 'package:fca_education_app/src/notification/data/model/notification_model.dart';
 import 'package:fca_education_app/src/notification/presentation/cubit/notification_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -78,12 +76,11 @@ class _AddCourseSheetState extends State<AddCourseSheet> {
             Navigator.pop(context);
             CoreUtils.showLoadingDialog(context);
 
-            await sl<NotificationCubit>().sendNotification(
-              NotificationModel.empty().copyWith(
-                title: 'New Course (${titleController.text.trim()})',
-                body: 'A new course has been added',
-                catgory: NotificationCatgory.COURSE,
-              ),
+            CoreUtils.sendNotification(
+              context,
+              title: 'New Course (${titleController.text.trim()})',
+              body: 'A new course has been added',
+              category: NotificationCatgory.COURSE,
             );
           }
         },

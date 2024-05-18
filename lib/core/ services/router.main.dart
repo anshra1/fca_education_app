@@ -71,26 +71,43 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         settings: settings,
       );
 
+    case CourseMaterialsView.routeName:
+      return _pageBuilder(
+        (p0) => BlocProvider(
+          create: (context) => sl<MaterialCubit>(),
+          child: CourseMaterialsView(settings.arguments! as Course),
+        ),
+        settings: settings,
+      );
+
+    case VideoPlayerView.routeName:
+      return _pageBuilder(
+        (p0) => VideoPlayerView(settings.arguments! as String),
+        settings: settings,
+      );
+
     case AddVideoView.routeName:
       return _pageBuilder(
         (p0) => MultiBlocProvider(
           providers: [
             BlocProvider(create: (_) => sl<CourseCubit>()),
             BlocProvider(create: (_) => sl<VideoCubit>()),
+            BlocProvider(create: (_) => sl<NotificationCubit>()),
           ],
           child: const AddVideoView(),
         ),
         settings: settings,
       );
 
-    case AddMaterialView.routeName:
+    case AddMaterialsView.routeName:
       return _pageBuilder(
         (p0) => MultiBlocProvider(
           providers: [
             BlocProvider(create: (_) => sl<CourseCubit>()),
             BlocProvider(create: (_) => sl<MaterialCubit>()),
+            BlocProvider(create: (_) => sl<NotificationCubit>()),
           ],
-          child: const AddMaterialView(),
+          child: const AddMaterialsView(),
         ),
         settings: settings,
       );
@@ -101,8 +118,36 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           providers: [
             BlocProvider(create: (_) => sl<CourseCubit>()),
             BlocProvider(create: (_) => sl<ExamCubit>()),
+            BlocProvider(create: (_) => sl<NotificationCubit>()),
           ],
           child: const AddExamView(),
+        ),
+        settings: settings,
+      );
+
+    case CourseVideosView.routeName:
+      return _pageBuilder(
+        (p0) => BlocProvider(
+          create: (context) => sl<VideoCubit>(),
+          child: CourseVideosView(settings.arguments! as Course),
+        ),
+        settings: settings,
+      );
+
+    case CourseExamView.routeName:
+      return _pageBuilder(
+        (p0) => BlocProvider(
+          create: (context) => sl<ExamCubit>(),
+          child: CourseExamView(settings.arguments! as Course),
+        ),
+        settings: settings,
+      );
+
+    case ExamDetailsView.routeName:
+      return _pageBuilder(
+        (p0) => BlocProvider(
+          create: (context) => sl<ExamCubit>(),
+          child: ExamDetailsView(settings.arguments! as Exam),
         ),
         settings: settings,
       );

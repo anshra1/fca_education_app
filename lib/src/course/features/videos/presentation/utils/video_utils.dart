@@ -4,6 +4,7 @@ import 'package:fca_education_app/core/extensions/string_extension.dart';
 import 'package:fca_education_app/core/utils/core_utils.dart';
 import 'package:fca_education_app/src/course/features/videos/data/models/video_model.dart';
 import 'package:fca_education_app/src/course/features/videos/domain/entity/video.dart';
+import 'package:fca_education_app/src/course/features/videos/presentation/views/video_player_view.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_metadata/youtube_metadata.dart';
@@ -68,12 +69,12 @@ class VideoUtils {
         );
       }
     } else {
-     // unawaited(
-       // navigator.pushNamed(
-      //    VideoPlayerView.routeName,
-        //  arguments: videoURL,
-       // ),
-   //   );
+      unawaited(
+        navigator.pushNamed(
+          VideoPlayerView.routeName,
+          arguments: videoURL,
+        ),
+      );
     }
   }
 }

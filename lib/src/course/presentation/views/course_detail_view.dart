@@ -6,6 +6,9 @@ import 'package:fca_education_app/core/extensions/context_extension.dart';
 import 'package:fca_education_app/core/extensions/int_extension.dart';
 import 'package:fca_education_app/core/res/media_res.dart';
 import 'package:fca_education_app/src/course/domain/entites/entites.dart';
+import 'package:fca_education_app/src/course/features/exams/presentation/views/course_exam_view.dart';
+import 'package:fca_education_app/src/course/features/materials/presentation/views/course_material_view.dart';
+import 'package:fca_education_app/src/course/features/videos/presentation/views/course_videos_view.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:iconly/iconly.dart';
@@ -72,7 +75,7 @@ class CourseDetailView extends StatelessWidget {
                         subTitle: 'Watch our tutorial '
                             'videos for ${course.title}',
                         onPressed: () => Navigator.of(context).pushNamed(
-                          '/unknown',
+                          CourseVideosView.routeName,
                           arguments: course,
                         ),
                       ),
@@ -81,10 +84,10 @@ class CourseDetailView extends StatelessWidget {
                       const Gap(10),
                       CourseInfoTile(
                         image: const Icon(IconlyLight.paper),
-                        title: '${course.numberOfVideos} Exam(s)',
+                        title: '${course.numberOfExams} Exam(s)',
                         subTitle: 'Take our exams for ${course.title}',
                         onPressed: () => Navigator.of(context).pushNamed(
-                          '/unknown',
+                          CourseExamView.routeName,
                           arguments: course,
                         ),
                       ),
@@ -98,7 +101,7 @@ class CourseDetailView extends StatelessWidget {
                             '${course.numberOfMaterials.estimate} '
                             'material for ${course.title}',
                         onPressed: () => Navigator.of(context).pushNamed(
-                          '/unknown',
+                          CourseMaterialsView.routeName,
                           arguments: course,
                         ),
                       ),
